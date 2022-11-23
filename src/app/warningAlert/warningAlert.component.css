@@ -1,0 +1,7 @@
+.alert{
+     padding:40px;
+     background-color: rgb(218, 21, 21);
+     margin: 50px;
+     width: 500px;
+     align-items: center;
+}
