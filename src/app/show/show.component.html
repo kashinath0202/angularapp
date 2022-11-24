@@ -1,7 +1,10 @@
 
-<div class="show">
-    <li>Angular</li>
-    <li>JavaScript</li>
-    <li>TypeScript</li>
-    <li>GitHub</li>
-</div>
+<label>My Name - {{name}}</label>
+<br>
+<label>My Mobile No. - {{moNumber}}</label>
+
+<p>Server with id {{serverId}} is {{getServerStatus()}}</p>
+
+
+<button [disabled]="!allowNewServer">ADD Server</button>
+
