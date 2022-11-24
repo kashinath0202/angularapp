@@ -1,0 +1,15 @@
+h1{
+    padding: 20px;
+    color: rgb(25, 51, 202);
+    background-color: rgb(214, 228, 22);
+}
+h2{
+    padding: 10px;
+    color: rgb(72, 92, 228);
+    background-color: rgb(232, 248, 10);
+}
+button{
+    color: rgb(243, 11, 11);
+    background-color: rgb(111, 111, 207);
+    border-radius: 5px;
+}
