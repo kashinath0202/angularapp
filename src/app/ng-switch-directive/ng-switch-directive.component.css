@@ -1,0 +1,11 @@
+
+
+.container{
+    padding: 100px;
+}
+.container{
+    background-color: aqua;
+    display: inline-block;
+    width: 600px;
+   margin-left: 400px;
+}
