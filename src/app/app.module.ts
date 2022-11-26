@@ -13,6 +13,9 @@ import { PropBindingComponent } from './prop-binding/prop-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { TwoWayBindingComponent } from './two-way-binding/two-way-binding.component';
 import { DataBindingAssignComponent } from './data-binding-assign/data-binding-assign.component';
+import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.component';
+import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.component';
+import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-directive.component';
 
 
 @NgModule({
@@ -26,14 +29,29 @@ import { DataBindingAssignComponent } from './data-binding-assign/data-binding-a
   PropBindingComponent,
   EventBindingComponent,
   TwoWayBindingComponent,
-  DataBindingAssignComponent
+  DataBindingAssignComponent,
+  NgIfDirectiveComponent,
+  NgForDirectiveComponent,
+  NgSwitchDirectiveComponent,
   ],
+
+
+
+
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule
   ],
+
+
+
+
   providers: [],
+
+
+  
   bootstrap: [AppComponent]
 })
+
 export class AppModule { }
