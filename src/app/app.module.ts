@@ -16,6 +16,8 @@ import { DataBindingAssignComponent } from './data-binding-assign/data-binding-a
 import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.component';
 import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.component';
 import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-directive.component';
+import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+
 
 
 @NgModule({
@@ -33,6 +35,7 @@ import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-dire
   NgIfDirectiveComponent,
   NgForDirectiveComponent,
   NgSwitchDirectiveComponent,
+  StructuralDirectiveComponent
   ],
 
 
