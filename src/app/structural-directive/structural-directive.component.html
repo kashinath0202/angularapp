@@ -1,0 +1,72 @@
+<p *ngIf="isShow">structural-directive works!</p>
+
+<h1 style="color: rgb(243, 19, 232);background-color: rgb(241, 228, 49);">*ngIf (structural-directive)</h1>
+
+<input (change)="show()" type="checkbox" *ngIf="isHide"> Directives
+<br>
+
+{{information}}
+
+<br>
+
+<button (click)="showInfo()">Structral Directive</button>
+
+<br>
+
+{{defination}}
+
+<br><br>
+
+<h1 style="color: rgb(243, 19, 232);background-color: rgb(241, 228, 49);">*ngFor (structural-directive)</h1>
+
+<h2>{{mobi}}</h2>
+
+<div>
+    <div>
+        <table class="table table-bordered border-primary">
+            <thead>
+                <th>Sr.No</th>
+                <th>Mobile Name</th>
+                <th>Ram</th>
+                <th>External Memory</th>
+                <th>Camera</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <tr *ngFor='let mobile of mobiles'>
+                    <td>{{mobile.srNo}}</td>
+                    <td>{{mobile.mobileName}}</td>
+                    <td>{{mobile.ram}}</td>
+                    <td>{{mobile.externalMemory}}</td>
+                    <td>{{mobile.camera}}</td>
+                    <td>{{mobile.prise}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<br>
+<br>
+
+<h1 style="color: rgb(243, 19, 232);background-color: rgb(241, 228, 49);">*ngSwitch (structural-directive)</h1>
+
+<div class="select">
+    <div class="row">
+        <select (change)="getMe($event)">
+            <option value="select">Select Images</option>
+            <option value="ganesh">Ganesh</option>
+            <option value="shankar">Shankar</option>
+            <option value="radha">Radha-Krishna</option>
+            <option value="hanuman">Maruthi</option>
+        </select>
+    </div>
+    <div>
+        <div class="col-md-12" [ngSwitch]="selectName">
+        <h2 *ngSwitchCase="'select'">Select God Name</h2>
+        <h2 *ngSwitchCase="'ganesh'"><img src="https://cdn.statusqueen.com/mobilewallpaper/thumbnail/mobile_wallpaper_86-372.jpg" class="size"></h2>
+        <h2 *ngSwitchCase="'shankar'"><img src="https://i.pinimg.com/564x/e2/b6/88/e2b6884debf1eac81903d3dca94d5a3d--d-wallpaper-hd-images.jpg" class="size"></h2>
+        <h2 *ngSwitchCase="'radha'"><img src="https://rukminim1.flixcart.com/image/416/416/l2c753k0/showpiece-figurine/9/w/m/8-10-radha-krishna-tulika-collections-19-original-imagdpkfu83nmmg6.jpeg?q=70" class="size"></h2>
+        <h2 *ngSwitchCase="'hanuman'"><img src="https://i.pinimg.com/564x/8c/d7/fd/8cd7fdd9b1dbcd92ab7f50125097edd9.jpg" class="size"></h2>
+    </div>
+</div>
