@@ -1,0 +1,45 @@
+<p>attribute-directive works!</p>
+
+<h2>ngStyle</h2>
+
+<!-- NgStyle attribute-directive works-->
+
+<div [ngStyle]="{'color':colorFont,'background-color':'gray'}">
+     Im am Front end Developer
+    </div> 
+
+<div [ngStyle]="{'color':isColor(),'background-color':'pink'}">
+        Im am Back end Developer
+       </div>
+
+
+
+       
+       <h2>ngClass</h2>
+
+<!-- NgClass attribute-directive works-->
+
+
+
+<ul *ngFor="let person of people">
+    <li [ngClass]="{
+        'text-success': person.country === 'UK',
+        'text-primary': person.country === 'USA',
+        'text-danger': person.country === 'HK'
+    }">
+ 
+     {{person.name}} ({{person.country}})
+    </li>
+</ul>
+
+
+<h2>Custom Directive</h2>
+
+<!-- Custom Directives (.ts file is custom-dire.directive.ts) -->
+
+
+<p appCustomDire>I am Angular Champ</p>
+
+<p>Custom Directive example</p>
+
+<div appCustomDire>Hii Guys Good Morning</div>
