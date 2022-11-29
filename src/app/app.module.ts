@@ -19,6 +19,7 @@ import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-dire
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 import { CustomDireDirective } from './custom-dire.directive';
+import { BindingPracticeComponent } from './binding-practice/binding-practice.component';
 
 
 
@@ -41,6 +42,7 @@ import { CustomDireDirective } from './custom-dire.directive';
   StructuralDirectiveComponent,
   AttributeDirectiveComponent,
   CustomDireDirective,
+  BindingPracticeComponent,
   ],
 
 

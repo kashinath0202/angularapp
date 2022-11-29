@@ -26,4 +26,11 @@ export class EventBindingComponent  {
 
    }
 
+   handEvent(value){
+    
+    let show = value.target.value
+    console.log(show);
+    
+   }
+
 }
