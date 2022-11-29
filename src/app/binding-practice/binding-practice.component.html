@@ -1,0 +1,22 @@
+<p>binding-practice works!</p>
+
+
+<input type="text" (keyup)="eventHandling($event)">
+
+
+
+<p>Font Size- {{ textSize }}px</p>
+
+<button (click)="setsize('incr')">+</button>
+<button (click)="setsize('decr')">-</button>
+
+<p [style.fontSize.px]="textSize" [class]="isColor">{{text}}</p>
+
+
+<select (change)="setColor($event)">
+    <option value="primary">primary</option>
+    <option value="secondary">secondary</option>
+    <option value="warning">warning</option>
+    <option value="danger">danger</option>
+    <option value="information">information</option>
+</select>

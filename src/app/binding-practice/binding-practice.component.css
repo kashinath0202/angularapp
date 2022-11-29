@@ -1,0 +1,20 @@
+.primary {
+    color: black;
+}
+
+.secondary {
+    color: yellow;
+}
+
+.warning {
+    color: rgb(225, 15, 155);
+}
+
+
+.danger {
+    color: red;
+}
+
+.information {
+    color: aqua;
+}
