@@ -28,7 +28,13 @@ closeFriend: string = '.......'
     setTimeout(()=>{
       return this.closeFriend = 'Sajd Sir'
      },5000)
-
   }
 
+    url='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRrZUMfKAYOSr_qhRaENCww1LuwpONwE4jYOQ&usqp=CAU';
+
+  sallary:number=50000;
+
+    myName(){
+    return  this.bestFriend+' '+this.sallary
+    }
 }

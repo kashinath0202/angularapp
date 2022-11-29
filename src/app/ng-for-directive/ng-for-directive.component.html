@@ -43,7 +43,8 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr *ngFor="let info of student">
+                        <tr *ngFor="let info of student"; let i=index>
+                            <td>{{i=1}}</td>
                             <td>{{info.studentId}}</td>
                             <td>{{info.studentName}}</td>
                             <td>{{info.studentClass}}</td>

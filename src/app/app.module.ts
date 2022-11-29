@@ -17,6 +17,9 @@ import { NgIfDirectiveComponent } from './ng-if-directive/ng-if-directive.compon
 import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.component';
 import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-directive.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
+import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
+import { CustomDireDirective } from './custom-dire.directive';
+
 
 
 
@@ -35,7 +38,9 @@ import { StructuralDirectiveComponent } from './structural-directive/structural-
   NgIfDirectiveComponent,
   NgForDirectiveComponent,
   NgSwitchDirectiveComponent,
-  StructuralDirectiveComponent
+  StructuralDirectiveComponent,
+  AttributeDirectiveComponent,
+  CustomDireDirective,
   ],
 
 

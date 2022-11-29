@@ -28,4 +28,15 @@ allowCountryName = false;
 
 imgUrl = 'Teacher Img'
  
+
+// class binding
+ 
+isApply:string='box border'
+
+
+//// Style binding
+
+styApply='gray';
+
+isTrue:boolean=false;
 }

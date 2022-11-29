@@ -13,3 +13,16 @@ h2{
 img{
      width:300px;
 }
+
+/* class Binding */
+
+.box{
+    width: 500px;
+    height: 300px;
+    background-color: rgb(198, 21, 116);
+}
+
+.border{
+    border-radius: 60px;
+    border-color: 2px solid red;
+}
