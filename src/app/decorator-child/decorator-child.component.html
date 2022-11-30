@@ -1,0 +1,42 @@
+
+<!-- @Output Example -->
+
+
+<h4>From Parent Component => {{name}}</h4>
+<h4>From Parent Component => {{greet}}</h4>
+
+
+<!-- Decorative Child @Input -->
+
+<div>
+    <div class="show">
+        <table class="table table-bordered border-warning">
+            <thead>
+                <th>Sr.No</th>
+                <th>Mobile Name</th>
+                <th>Ram</th>
+                <th>External Memory</th>
+                <th>Camera</th>
+                <th>Price</th>
+            </thead>
+            <tbody>
+                <tr *ngFor='let mobile of allMobile' >
+                    <td>{{mobile.srNo}}</td>
+                    <td>{{mobile.mobileName}}</td>
+                    <td>{{mobile.ram}}</td>
+                    <td>{{mobile.externalMemory}}</td>
+                    <td>{{mobile.camera}}</td>
+                    <td>{{mobile.prise}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+<!-- @Output Example -->
+
+<h4>Enter Your Name</h4>
+
+<!-- Step First User Enter Data -->
+<input type="text" (keyup.enter)="callMe(data.value)" #data>

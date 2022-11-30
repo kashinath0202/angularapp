@@ -1,0 +1,12 @@
+
+
+
+<ul *ngFor="let d of allData">
+    <li>{{d}}</li>
+</ul>
+
+<app-decorator-child [allMobile]="mobiles" [name]="info" [greet]="hiii"></app-decorator-child>
+
+<app-decorator-child (dataEvent)="onGetData($event)"></app-decorator-child>
+
+
