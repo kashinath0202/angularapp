@@ -20,6 +20,10 @@ import { StructuralDirectiveComponent } from './structural-directive/structural-
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
 import { CustomDireDirective } from './custom-dire.directive';
 import { BindingPracticeComponent } from './binding-practice/binding-practice.component';
+import { DecoratorParentComponent } from './decorator-parent/decorator-parent.component';
+import { DecoratorChildComponent } from './decorator-child/decorator-child.component';
+import { OutputDecoratorParentComponent } from './output-decorator-parent/output-decorator-parent.component';
+import { OutputDecoratorChildComponent } from './output-decorator-child/output-decorator-child.component';
 
 
 
@@ -43,6 +47,10 @@ import { BindingPracticeComponent } from './binding-practice/binding-practice.co
   AttributeDirectiveComponent,
   CustomDireDirective,
   BindingPracticeComponent,
+  DecoratorParentComponent,
+  DecoratorChildComponent,
+  OutputDecoratorParentComponent,
+  OutputDecoratorChildComponent,
   ],
 
 
