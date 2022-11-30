@@ -1,0 +1,22 @@
+
+
+<app-output-decorator-child (employeeDetail)="hanEvent($event)" ></app-output-decorator-child>
+
+<table class="table table-bordered border-primary">
+    <thead>
+        <th>Employee ID</th>
+        <th>Employee Name</th>
+        <th>Employee Company</th>
+        <th>Employee Sallary</th>
+        <th>Employee Location</th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let emp of data">
+            <td>{{emp.empId}}</td>
+            <td>{{emp.empName}}</td>
+            <td>{{emp.empCompany}}</td>
+            <td>{{emp.empSallary}}</td>
+            <td>{{emp.empWorkingLocation}}</td>
+        </tr>
+    </tbody>
+</table>
