@@ -24,6 +24,11 @@ import { DecoratorParentComponent } from './decorator-parent/decorator-parent.co
 import { DecoratorChildComponent } from './decorator-child/decorator-child.component';
 import { OutputDecoratorParentComponent } from './output-decorator-parent/output-decorator-parent.component';
 import { OutputDecoratorChildComponent } from './output-decorator-child/output-decorator-child.component';
+import { OnChangesHookComponent } from './on-changes-hook/on-changes-hook.component';
+import { OnChangeHookParentComponent } from './on-change-hook-parent/on-change-hook-parent.component';
+import { OnChangeParentComponent } from './on-change-parent/on-change-parent.component';
+import { OnChangeChildComponent } from './on-change-child/on-change-child.component';
+
 
 
 
@@ -51,6 +56,10 @@ import { OutputDecoratorChildComponent } from './output-decorator-child/output-d
   DecoratorChildComponent,
   OutputDecoratorParentComponent,
   OutputDecoratorChildComponent,
+  OnChangesHookComponent,
+  OnChangeHookParentComponent,
+  OnChangeParentComponent,
+  OnChangeChildComponent,
   ],
 
 
