@@ -1,0 +1,26 @@
+<div>
+    <ol>
+        <li>Add A button which says 'Display Details'</li>
+        <li>Add a paragraph with any content of your choice (e.g. 'A am  Angular Developer')</li>
+        <li>Toggle the displaying of that paragraph with the button created in the first step</li>
+        <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a 
+       timestamp or simply an incrementing number)</li>
+        <li>Starting at the 5th log item, give all future log items a yellow background (via ngStyle) and red 
+       color (ngClass)</li>
+        </ol>
+</div>
+
+<!-- <button (click)="showSecret = !showSecret">Show Details</button> -->
+
+<button (click)="onToggle()">Show Details</button>
+<p *ngIf="showSecret">A am  Angular Developer</p> 
+
+<div *ngFor="let logItem of log"
+[ngStyle]="{backgroundColor: logItem >= 5 ? 'yellow':'transparent' }"
+[ngClass]="{fontColor : logItem >= 5}">
+     {{logItem}}
+</div> 
+
+
+             
+            
