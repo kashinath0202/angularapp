@@ -28,6 +28,8 @@ import { OnChangesHookComponent } from './on-changes-hook/on-changes-hook.compon
 import { OnChangeHookParentComponent } from './on-change-hook-parent/on-change-hook-parent.component';
 import { OnChangeParentComponent } from './on-change-parent/on-change-parent.component';
 import { OnChangeChildComponent } from './on-change-child/on-change-child.component';
+import { AddRemoveAssignComponent } from './add-remove-assign/add-remove-assign.component';
+import { DirectivePracticeComponent } from './directive-practice/directive-practice.component';
 
 
 
@@ -60,6 +62,8 @@ import { OnChangeChildComponent } from './on-change-child/on-change-child.compon
   OnChangeHookParentComponent,
   OnChangeParentComponent,
   OnChangeChildComponent,
+  AddRemoveAssignComponent,
+  DirectivePracticeComponent,
   ],
 
 
