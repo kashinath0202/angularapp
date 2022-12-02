@@ -1,0 +1,24 @@
+.main {
+    text-align: center;
+    margin: 20px;
+}
+
+.head {
+    color: rgb(230, 85, 23);
+}
+
+input {
+    width: 250px;
+    text-align: center;
+    margin: 20px;
+}
+
+table {
+    width: 500px;
+    margin-left: 350px;
+    margin-top: 30px;
+}
+
+[placeholder] {
+    border-radius: 10px;
+}
