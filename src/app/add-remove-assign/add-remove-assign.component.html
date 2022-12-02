@@ -1,0 +1,27 @@
+<div class="main">
+    <div class="head">
+        <h4>Add & Remove Assignment</h4>
+    </div>
+    <div class="allData">
+        <input [(ngModel)]="mobileName" #enter placeholder="Enter favorite Mobile name...">
+    </div>
+    <div class="butt">
+        <button class="btn btn-success" (click)="addData(enter.value)">Add Mobile Name</button>
+
+    </div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Mobile Names</th>
+                <th>Remove Product</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let mobile of data">
+                <td>{{mobile.mobileName}}</td>
+                <td><button (click)="removeMobile(value)" class="btn btn-danger">Remove</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
