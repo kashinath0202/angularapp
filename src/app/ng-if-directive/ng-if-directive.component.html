@@ -1,5 +1,3 @@
-
-
 <!-- we can show & hide  dom element -->
 
 <!-- <p *ngIf="isShow">I am Angular Developer</p>
@@ -8,4 +6,43 @@
 
 <!-- we can show & hide  dom element -->
 
-<input type="checkbox" name="check" *ngIf="isDeclare">
+<!-- <input type="checkbox" (click)="myInfo(value)" *ngIf="isDeclare" >
+
+{{data}} -->
+
+<!-- practice 2 (*ngIf) -->
+
+<input type="radio" name="radio1" (click)="clickMe(true)">Morning
+<input type="radio" name="radio1" (click)="clickMe(false)">Night
+
+<div *ngIf="isAction">Time 08:00am TO 02:00pm</div>
+
+<div *ngIf="!isAction">Time 08:00pm TO 10:00pm</div>
+
+<!-- practice 2 (*ngIf with else) -->
+
+<input type="radio" name="radio1" (click)="clickBy(true)">Angular
+<input type="radio" name="radio1" (click)="clickBy(false)">React
+
+<div *ngIf="isActions; else elseBlock"> I Am Angular Developer</div>
+
+
+<ng-template #elseBlock>
+    <div>I Am React Developer</div>
+</ng-template>
+
+
+<!-- practice 2 (*ngIf with then & else) -->
+
+<input type="radio" name="radio1" (click)="click(true)">isDeveloper
+<input type="radio" name="radio1" (click)="click(false)">isDeveloper
+
+<div *ngIf="action; then thenBox ; else elseBox"></div>
+
+<ng-template #thenBox>
+    <div>I Am UI Developer</div>
+</ng-template>
+
+<ng-template #elseBox>
+    <div>I Am FullStack Developer</div>
+</ng-template>
