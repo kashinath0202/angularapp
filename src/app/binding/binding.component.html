@@ -1,0 +1,63 @@
+
+<p>{{2+2}}</p>
+
+<p>{{2*6}}</p>
+
+<p>hii good {{greet}}</p>
+
+<p >Very Good Morning</p>
+
+<input type="text"  [disabled]="action">
+
+<br><br>
+
+<input type="text" [disabled]="action">
+
+<br><br>
+
+<button (click)="showMe()">Enable ME</button>
+<br><br>
+<button [ngStyle]="{color:!isShow ? 'red' : 'blue'}" [disabled]="isShows">Show ME</button>
+
+<!-- Attribute binding -->
+
+<br><br>
+
+<table [attr.border]="style">
+    <thead>
+        <tr>
+            <th [attr.colspan]="merge">Student Details</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Student ID</td>
+            <td>Student Name</td>
+            <td>Class</td>
+        </tr>
+        <tr>
+            <td>22</td>
+            <td>Sachin</td>
+            <td>12th</td>
+        </tr>
+    </tbody>
+</table>
+
+<!--  Class Binding -->
+
+<div [class.class1]="classes"></div>
+
+
+
+<!--  style Binding -->
+
+<div [style.margin]="marg"></div>
+
+<!-- Event Binding -->
+
+<button (click)="getData()">Click Me</button>
+<br><br>
+<input type="text" (keyup.enter)="enterKey($event)">
+
+<p>{{allKey}}</p>
+
