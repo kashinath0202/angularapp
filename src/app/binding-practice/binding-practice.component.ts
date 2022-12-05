@@ -18,7 +18,7 @@ export class BindingPracticeComponent {
   
   }
 
-  textSize:number=10;
+  textSize:number=30;
 
   setsize(operation){
     if(operation=='incr'){

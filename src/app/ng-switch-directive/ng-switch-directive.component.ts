@@ -23,6 +23,15 @@ export class NgSwitchDirectiveComponent implements OnInit {
     this.selectedProduct = value.target.value;
   }
 
+    //practice = 2 (ngSwitch) 
+
+  allValues:string;
+
+  getValue(value){
+    console.log(value.target.value);
+  this.allValues=value.target.value;
+  }
+
   constructor() { }
 
   ngOnInit() {

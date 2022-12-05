@@ -5,6 +5,8 @@ import { Directive, ElementRef, Renderer2 } from '@angular/core';
 })
 export class CustomDireDirective {
 
+    // app-attribute-directive file implemeted
+
   constructor(private el:ElementRef,private render:Renderer2) {
     console.log('Custom Directive Apply')
 

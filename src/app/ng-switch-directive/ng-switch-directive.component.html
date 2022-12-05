@@ -24,7 +24,7 @@
 <div class="container">
     <div class="row">
         <div class="col-md-4">
-            <select class="form-control" (change)="getProductValue($event)" >
+            <select class="form-control" (change)="getProductValue($event)">
                 <option value="Default">Select Bike</option>
                 <option value="Pulsar">Pulsar</option>
                 <option value="KTM">KTM</option>
@@ -42,3 +42,26 @@
         </div>
     </div>
 </div>
+
+
+<br><br><hr>
+<!-- practice = 2 (ngSwitch) -->
+
+<div class="btn-group dropup">
+    <select (change)="getValue($event)">
+        <option value="default">--Select--</option>
+        <option value="One">One</option>
+        <option value="Two">Two</option>
+        <option value="Three">Three</option>
+        <option value="Five">Five</option>
+    </select>
+</div>
+<div [ngSwitch]="allValues">
+    <h4 class="text-success" *ngSwitchDefault>Default</h4>
+    <h4 class="text-success" *ngSwitchCase="'One'">One</h4>
+    <h4 class="text-success" *ngSwitchCase="'Two'">Two</h4>
+    <h4 class="text-success" *ngSwitchCase="'Three'">Three</h4>
+    <h4 class="text-success" *ngSwitchCase="'Five'">Five</h4>
+</div>
+
+<h1><mark>{{allValues}}</mark></h1>
