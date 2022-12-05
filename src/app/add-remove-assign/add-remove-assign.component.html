@@ -7,18 +7,22 @@
     </div>
     <div class="butt">
         <button class="btn btn-success" (click)="addData(enter.value)">Add Mobile Name</button>
+        <br><br>
+        <button class="btn btn-warning" (click)="clearMe()" >Clear</button>
 
     </div>
 
     <table class="table table-bordered">
         <thead>
             <tr>
+                <th>Sr.No</th>
                 <th>Mobile Names</th>
                 <th>Remove Product</th>
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let mobile of data">
+            <tr *ngFor="let mobile of data ; let i=index">
+                <td>{{i+1}}</td>
                 <td>{{mobile.mobileName}}</td>
                 <td><button (click)="removeMobile(value)" class="btn btn-danger">Remove</button></td>
             </tr>

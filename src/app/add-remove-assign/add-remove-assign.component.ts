@@ -26,6 +26,11 @@ export class AddRemoveAssignComponent implements OnInit {
    this.data.splice(value,1)
   }
 
+
+     clearMe(){
+   this.mobileName='';
+  }
+
   ngOnInit() { 
   }
 
