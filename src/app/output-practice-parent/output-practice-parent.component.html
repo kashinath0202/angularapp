@@ -1,0 +1,30 @@
+
+<app-output-practice-child (transferName)="accessData($event)" (empData)="accessEmpData($event)"></app-output-practice-child>
+
+<!-- 1st -->
+<ul>
+    <li *ngFor="let data of nameData ; let i=index">Get Values :- {{i+1}}-{{data}}</li>
+</ul>
+
+<!-- 2nd -->
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Employee ID</th>
+            <th>Employee Name</th>
+            <th>Employee Age</th>
+            <th>Employee Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let takeData of empData ; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{takeData.empId}}</td>
+            <td>{{takeData.empName}}</td>
+            <td>{{takeData.empAge}}</td>
+            <td>{{takeData.empAddress}}</td>
+        </tr>
+    </tbody>
+</table>
