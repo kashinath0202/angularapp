@@ -30,6 +30,15 @@ import { OnChangeParentComponent } from './on-change-parent/on-change-parent.com
 import { OnChangeChildComponent } from './on-change-child/on-change-child.component';
 import { AddRemoveAssignComponent } from './add-remove-assign/add-remove-assign.component';
 import { DirectivePracticeComponent } from './directive-practice/directive-practice.component';
+import { BindingComponent } from './binding/binding.component';
+import { NgStyleDirectiveComponent } from './ng-style-directive/ng-style-directive.component';
+import { NgClassDirectiveComponent } from './ng-class-directive/ng-class-directive.component';
+import { DecoratorChildPracticeComponent } from './decorator-child-practice/decorator-child-practice.component';
+import { DecoratorParentPracticeComponent } from './decorator-parent-practice/decorator-parent-practice.component';
+import { OutputPracticeParentComponent } from './output-practice-parent/output-practice-parent.component';
+import { OutputPracticeChildComponent } from './output-practice-child/output-practice-child.component';
+
+
 
 
 
@@ -64,6 +73,13 @@ import { DirectivePracticeComponent } from './directive-practice/directive-pract
   OnChangeChildComponent,
   AddRemoveAssignComponent,
   DirectivePracticeComponent,
+  BindingComponent,
+  NgStyleDirectiveComponent,
+  NgClassDirectiveComponent,
+  DecoratorChildPracticeComponent,
+  DecoratorParentPracticeComponent,
+  OutputPracticeParentComponent,
+  OutputPracticeChildComponent,
   ],
 
 
