@@ -1,0 +1,25 @@
+
+<!-- NgStyle attribute-directive works-->
+
+<ul *ngFor="let data of Person">
+    <li [ngStyle]="{'background-color': applyColor(data.country)}">
+        {{data.name}}-{{data.country}}
+    </li>
+</ul>
+
+<br><br><hr>
+<!-- practice -->
+
+<p [ngStyle]="{'color': isApply ?'red' : 'blue'}"> Very Good Morning</p>
+
+<p [ngStyle]="exColor">I am Angular Champ</p>
+
+<button (click)="myColor()">My Color</button>
+
+<br><br><hr>
+<!-- practice -->
+
+<p [ngStyle]="{
+    'Color':'pink',
+     'background-color':'yellow',
+      'font-size':'50px'}">I am React Champ</p>
