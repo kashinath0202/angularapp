@@ -1,0 +1,17 @@
+
+
+<p [ngClass]="'one two four'">I am Front end Developer</p>
+
+<br><br><hr>
+
+<p [ngClass]="cssApply">I am back end developer</p>
+
+<br><br><hr>
+
+<div *ngFor="let persons of person" [ngClass]="'three five'">{{persons}}</div>
+
+<br><br><hr>
+
+<p [ngClass]="'two'">hii Good morning Friends</p>
+
+<button (click)="clickMe()">Apply CSS</button>
