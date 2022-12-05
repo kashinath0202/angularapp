@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { Course, Movies, Student } from '../models/movies';
 
 @Component({
@@ -6,7 +6,7 @@ import { Course, Movies, Student } from '../models/movies';
   templateUrl: './ng-for-directive.component.html',
   styleUrls: ['./ng-for-directive.component.css']
 })
-export class NgForDirectiveComponent implements OnInit {
+export class NgForDirectiveComponent{
 
   title: string = "Top 3 Movies";
   movies: Movies[] = [
@@ -33,9 +33,83 @@ export class NgForDirectiveComponent implements OnInit {
     {courseName:'Java',courseFee:50000, studentIntake:25}
   ]
 
-  constructor() { }
 
-  ngOnInit() {
+
+Student:any[]=[
+  {name:'Sachin'},
+  {name:'Sandip'},
+  {name:'Sagar'},
+  {name:'Ajay'},
+  {name:'Sanjay'}
+]
+
+
+
+//*ngFor Using TrackBy 
+
+ 
+  simple:any[];
+  constructor() { 
+   this.simple=[
+      {id:11,
+       sName:'Ajay',
+       age:23,
+     },
+     {id:22,
+       sName:'Pankaj',
+       age:24,
+     },
+     {id:33,
+       sName:'Sajid',
+       age:24,
+     },
+     {id:44,
+       sName:'Sachin',
+       age:25,
+     },
+     {id:55,
+       sName:'Sandip',
+       age:26,
+     },
+   ]
   }
 
+  addExtraData():void{
+    this.simple=[
+      {id:11,
+       sName:'Ajay',
+       age:23,
+     },
+     {id:22,
+       sName:'Pankaj',
+       age:24,
+     },
+     {id:33,
+       sName:'Sajid',
+       age:24,
+     },
+     {id:44,
+       sName:'Sachin',
+       age:25,
+     },
+     {id:55,
+       sName:'Sandip',
+       age:26,
+     },
+     {id:100,
+      sName:'Onkar',
+      age:50,
+    },
+    {id:200,
+      sName:'Prashant',
+      age:60,
+    }
+   ]
+  }
+
+    trackById(index:number,simple:any):string{
+       return simple.id
+    }
 }
+
+// *ngFor Using Grouping  

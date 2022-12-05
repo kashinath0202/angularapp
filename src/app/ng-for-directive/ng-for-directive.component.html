@@ -1,4 +1,4 @@
-<!-- <div>
+<div>
     <div>
         {{title}}
     </div>
@@ -7,6 +7,7 @@
     <table class="table">
         <thead>
             <tr>
+                <th>Sr.No</th>
                 <th>Title</th>
                 <th>Director</th>
                 <th>Cast</th>
@@ -14,7 +15,8 @@
             </tr>
         </thead>
         <tbody>
-            <tr *ngFor="let movie of movies">
+            <tr *ngFor="let movie of movies ; let i= index">
+                <td>{{i+1}}</td>
                 <td>{{movie.title}}</td>
                 <td>{{movie.director}}</td>
                 <td>{{movie.cast}}</td>
@@ -22,44 +24,45 @@
             </tr>
         </tbody>
     </table>
-</div> -->
+</div>
 
+<!-- Practice *ngFor -->
 
-<!-- Student Data -->
+Student Data
 
-<!-- <div>
+<div>
     <div>
         {{infoStudent}}
     </div>
     <div>
         <table class="table">
-                    <thead>
-                        <tr>
-                          <th>Student Id</th>
-                          <th>Student Name</th>
-                          <th>Student class</th>
-                          <th>Student Mark</th>
-                          <th>Student Result</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let info of student"; let i=index>
-                            <td>{{i=1}}</td>
-                            <td>{{info.studentId}}</td>
-                            <td>{{info.studentName}}</td>
-                            <td>{{info.studentClass}}</td>
-                            <td>{{info.studentMarks}}</td>
-                            <td>{{info.studentResult}}</td>
-                        </tr>
-                    </tbody>
+            <thead>
+                <tr>
+                    <th>Student Id</th>
+                    <th>Student Name</th>
+                    <th>Student class</th>
+                    <th>Student Mark</th>
+                    <th>Student Result</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let info of student">
+                    <td>{{info.studentId}}</td>
+                    <td>{{info.studentName}}</td>
+                    <td>{{info.studentClass}}</td>
+                    <td>{{info.studentMarks}}</td>
+                    <td>{{info.studentResult}}</td>
+                </tr>
+            </tbody>
         </table>
 
     </div>
-</div> -->
+</div>
 
-<!-- course data -->
+<!-- Practice *ngFor -->
+course data
 
-<!-- Student Data -->
+Student Data
 <div class="box">
     <div>
         <div class="title">
@@ -82,7 +85,73 @@
                     </tr>
                 </tbody>
             </table>
-
         </div>
     </div>
 </div>
+
+<!-- Practice *ngFor -->
+
+<ul>
+    <li *ngFor="let allData of Student; let i=index">
+        {{i+1}} - {{allData.name}}
+    </li>
+</ul>
+
+
+<!-- extra Practice -->
+
+
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Student Name</th>
+            <th>Evan Check</th>
+            <th>Odd Check</th>
+            <th>First Check</th>
+            <th>Last Check</th>
+        </tr>
+    </thead>
+    <tbody>
+
+<tr *ngFor="let allData of Student; let i=index ; let ev=even ; let od=odd ; let fst=first ; let lst=last">
+            <td>{{i+1}}</td>
+            <td>{{allData.name}}</td>
+            <td>{{ev}}</td>
+            <td>{{od}}</td>
+            <td>{{fst}}</td>
+            <td>{{lst}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<!-- *ngFor Using TrackBy -->
+<h1>*ngFor Using TrackBy</h1>
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Student Id</th>
+            <th>Student Name</th>
+            <th>age</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of simple ; let i=index; trackBy:trackById">
+            <td>{{i+1}}</td>
+            <td>{{data.id}}</td>
+            <td>{{data.sName}}</td>
+            <td>{{data.age}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br><br>
+<button (click)="addExtraData()">Show More Data</button>
+
+
+<!-- *ngFor Using Grouping  -->
