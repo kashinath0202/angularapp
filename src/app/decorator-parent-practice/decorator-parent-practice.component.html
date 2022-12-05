@@ -1,0 +1,23 @@
+<!-- String Pass -->
+<input type="text" [(ngModel)]="types"(keyup.enter)="getData($event)" placeholder="type here...">
+
+<br><br>
+
+<button class="btn btn-warning" (click)="clear(inp)">Clear</button>
+
+<br><br><hr>
+<!-- Array Pass  -->
+<label>Name</label>
+<input type="text" placeholder="type Name..." (keyup.enter)="trData($event)">
+<br><br>
+<label>Company</label>
+<input type="text" placeholder="type Company..." (keyup.enter)="trDataComp($event)">
+
+<br><br>
+
+<!-- Objet Pass -->
+<input type="text" placeholder="type Employee Name..." (keyup.enter)="empData($event)">
+
+
+<!-- selector Child -->
+<app-decorator-child-practice [transData]="data" [takeData]="arrayData" [takeData1]="allArrayData" [empData]='emp'></app-decorator-child-practice>  

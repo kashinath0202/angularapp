@@ -1,0 +1,29 @@
+<!-- String Pass  -->
+<p [style.color]="'red'"> I am From Parent -{{transData}}</p>
+
+<hr>
+<!-- array pass -->
+
+
+<table class="table table-bordered table-dark">
+    <thead >
+        <tr>
+            <th>Sr.No</th>
+            <th>Name</th>
+            <th>Company</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let names of takeData ; let i=index ; let company of takeData1" >
+            <td>{{i+1}}</td>
+            <td>{{names}}</td>
+            <td>{{company}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+<!-- Object Pass -->
+
+<p>Name :- {{empData.name}}</p>
+<p>Id :- {{empData.id}}</p>
