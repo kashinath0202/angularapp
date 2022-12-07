@@ -1,0 +1,15 @@
+<h2>life Cycle Hooks for ngAfterContentInit  & ngAfterContentChecked</h2>
+<!-- life Cycle Hooks for ngAfterContentInit  & ngAfterContentChecked -->
+
+<input type="text" (blur)="getData($event)" placeholder="Enter Value...">
+
+
+
+
+<app-life-cycle-hook-child [parentData]="data">
+    <!-- send Data parent to chile & use for content Projection -->
+    <!-- Using # Change layout & behavior of <h1> tag  -->
+    <h5 #layout>  
+        Angular is a TypeScript-based free and open-source web application framework led by the Angular Team   at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
+    </h5>
+</app-life-cycle-hook-child>
