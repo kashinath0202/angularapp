@@ -37,6 +37,8 @@ import { DecoratorChildPracticeComponent } from './decorator-child-practice/deco
 import { DecoratorParentPracticeComponent } from './decorator-parent-practice/decorator-parent-practice.component';
 import { OutputPracticeParentComponent } from './output-practice-parent/output-practice-parent.component';
 import { OutputPracticeChildComponent } from './output-practice-child/output-practice-child.component';
+import { LifeCycleHookChildComponent } from './life-cycle-hook-child/life-cycle-hook-child.component';
+import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycle-hook-parent.component';
 
 
 
@@ -80,6 +82,8 @@ import { OutputPracticeChildComponent } from './output-practice-child/output-pra
   DecoratorParentPracticeComponent,
   OutputPracticeParentComponent,
   OutputPracticeChildComponent,
+  LifeCycleHookChildComponent,
+  LifeCycleHookParentComponent,
   ],
 
 
