@@ -18,4 +18,12 @@ export class LifeCycleHookParentComponent implements OnInit {
       this.data = value.target.value;
   }
 
+    // using Button remove the child component in dom 
+
+  appChild:Boolean=true
+
+  destroyCall(){
+    this.appChild=false
+  }
+
 }

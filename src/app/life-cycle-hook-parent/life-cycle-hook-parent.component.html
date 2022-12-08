@@ -6,10 +6,16 @@
 
 
 
-<app-life-cycle-hook-child [parentData]="data">
+<app-life-cycle-hook-child [parentData]="data" *ngIf="appChild">
     <!-- send Data parent to chile & use for content Projection -->
+    <!-- Using *ngIf remove the child component into the dom  -->
     <!-- Using # Change layout & behavior of <h1> tag  -->
     <h5 #layout>  
         Angular is a TypeScript-based free and open-source web application framework led by the Angular Team   at Google and by a community of individuals and corporations. Angular is a complete rewrite from the same team that built AngularJS.
     </h5>
 </app-life-cycle-hook-child>
+
+<hr>
+
+<!-- using Button remove the child component in dom  -->
+<button type="button" class="btn btn-danger" (click)="destroyCall()">Destroy child Component</button>

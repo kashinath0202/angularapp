@@ -1,5 +1,5 @@
 import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, ContentChild,
-         DoCheck, ElementRef, Input,OnChanges, OnInit, SimpleChanges, ViewChild } from '@angular/core';
+         DoCheck, ElementRef, Input,OnChanges, OnDestroy, OnInit, SimpleChanges, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-life-cycle-hook-child',
@@ -7,9 +7,9 @@ import { AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit,
   styleUrls: ['./life-cycle-hook-child.component.css']
 })
 export class LifeCycleHookChildComponent implements OnInit, OnChanges , DoCheck , 
-AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked{
+AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked , OnDestroy{
 
-  @Input() parentData:string;  // Using Input Decorator  (Binding of Parent component)
+  @Input() parentData:string;  // Using Input Decorator  (Binding of Parent Component)
 
   @ContentChild('layout', {static:false}) contentParentData:ElementRef;   // Ref. Variable selected From Parent Component (layout)
   @ViewChild('childData',{static:false}) contentChildData:ElementRef;    // Ref. Variable selected From Child Component (childData)
@@ -17,8 +17,17 @@ AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked{
   constructor() {
     // Called By 1st Number
      console.log('constructor Called');
-     
    }
+
+   // Using this Destroy
+   counter;
+   num:number=1;
+
+  ngOnDestroy(): void {
+    // It is Called when remove the previous component Called By the last & 
+    console.log('ngOnDestroy Called');
+    clearInterval(this.counter)        // Stop Counter
+  }
   ngAfterViewChecked(): void {
     // Called By 8th Number & every time when change Detection 
     console.log('ngAfterViewChecked Called');
@@ -51,6 +60,12 @@ AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked{
   ngOnInit() {
     // Called By 3rd Number
     console.log('ngOnInit Called');
+
+    this.counter=setInterval(()=>{     // Using This ngDestroy hook
+      this.num= this.num + 1;
+      console.log(this.num);
+      
+    },2000)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
