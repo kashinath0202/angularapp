@@ -1,0 +1,17 @@
+input.ng-invalid.ng-touched{
+    border-color: red;
+    box-shadow: 20px 20px 50px 10px rgb(207, 90, 109) inset;
+}
+
+.container{
+    background-image: url(D:\Angular\angularapp\src\assets\images\loginImg2.jpg);
+}
+
+label{
+    color: rgb(238, 13, 13);
+    font-size: 20px;
+}
+button{
+    margin-left: 140px;
+    width: 100px;
+}
