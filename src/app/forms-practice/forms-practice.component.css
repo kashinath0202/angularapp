@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched{
+   border-color: red;
+}
+
+
+.formAlign{
+  align-items: center;
+ 
+}

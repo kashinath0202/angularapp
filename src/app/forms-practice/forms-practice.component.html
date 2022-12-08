@@ -1,0 +1,32 @@
+
+<div class="conatainer">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-5">
+            <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+                <h2 class="text-center"> Register Form </h2>
+                <br>
+                <div class="form-group col-md-5">
+                    <label>First Name</label>
+                    <input class="form-control" type="text" placeholder="Enter your First Name" name="first Name"
+                       required ngModel>
+                </div>
+
+                <div class="form-group col-md-5">
+                    <label>Last Name</label>
+                    <input class="form-control" type="text" placeholder="Enter Last First Name" name="last Name"
+                    required  ngModel>
+                </div>
+
+                <div class="form-group col-md-5">
+                    <label>Email ID</label>
+                    <input class="form-control" type="text" email placeholder="Enter your Email Address" name="email Address"
+                    required  ngModel>
+                </div>
+                <br>
+                <div class="align-center">
+                    <button type="submit" class="btn btn-primary" id="register" [disabled]="!regForm.valid">Register</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
