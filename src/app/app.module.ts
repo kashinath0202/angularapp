@@ -39,6 +39,8 @@ import { OutputPracticeParentComponent } from './output-practice-parent/output-p
 import { OutputPracticeChildComponent } from './output-practice-child/output-practice-child.component';
 import { LifeCycleHookChildComponent } from './life-cycle-hook-child/life-cycle-hook-child.component';
 import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycle-hook-parent.component';
+import { FormsPracticeComponent } from './forms-practice/forms-practice.component';
+import { TemplateFormComponent } from './template-form/template-form.component';
 
 
 
@@ -84,6 +86,8 @@ import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycl
   OutputPracticeChildComponent,
   LifeCycleHookChildComponent,
   LifeCycleHookParentComponent,
+  FormsPracticeComponent,
+  TemplateFormComponent
   ],
 
 
