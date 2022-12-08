@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+ body{
+   
+   background-image: url(D:\Angular\angularapp\src\assets\images\loginImg2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Frank Ruhl Libre', serif;
+    font-size: 18px;
+    color: rgb(5, 0, 0);
+    width: 1600px;
+    height: 700px;
+  
+} 
+.register{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 700px;
+    width: 580px;
+    background-color: rgba(58, 50, 50, 0.5);
+    margin-top: 50px;
+    margin-left: 500px;
+    border: 1px solid red;
+    border-radius:20px;
+   
+}
+.register ul li{
+    list-style: none;
+    margin:30px;
+    border: none;
+    
+}
+.register ul li input{
+    border: none;
+   
+}
+#name{
+   width: 450px;
+   height: 30px;
+   outline: none;
+   border-radius: 13px;
+}
+#gend{
+    width:200;
+    height:20px;
+    margin: 0px 20px;
+}
+.register input{
+    border: none;
+    outline: none;
+    border-radius: 13px;
+}
+
+ .button1 input {
+    background-color: #e76208;
+    height: 40px;
+    width: 150px;
+    color: white;
+    border-radius: 7px;
+    font-size: 17px;
+    outline: none;
+    margin-left:150px;
+} 
+
+h2{
+    margin-left: 150px;
+    text-shadow: 5px 5px 10px rgb(11, 237, 26);
+    font-weight: 800;
+    margin-top: -40px;
+}

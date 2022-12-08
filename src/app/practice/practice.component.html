@@ -1,0 +1,61 @@
+<body>
+    <div class="background">
+        <div class="register">
+            <form #regForm="ngForm" (ngSubmit)="register(regForm)">
+
+                <ul>
+                    <h2>Register Form</h2>
+                    <div>
+                        <li><input type="text" placeholder="Enter Your Full Name*" id="name" required ngModel #name="ngModel">
+                            <span *ngIf="name.touched && name.valid">Please enter your full name</span></li>
+                    </div>
+                    <div>
+                        <li><input type="email" placeholder="Email ID - Ex.abc@gmail.com*" id="name" email required>
+                        </li>
+                    </div>
+                    <li><input placeholder="Enter Your Mobile Number*" id="name" minlength="10" maxlength="15"></li>
+                    <div>
+                        <li><input type="date" id="name" placeholder="Date Of Birth"></li>
+                    </div>
+                    <div>
+                        <li>
+                            <label for="name">Gender - </label>
+                            <input type="radio" name="gender" id="gend">Male
+                            <input type="radio" name="gender" id="gend">Female
+                        </li>
+                    </div>
+                    <div>
+                        <li><input type="text" placeholder="Graduation Passing Year*" id="name"></li>
+                        <li>
+                            <select id="name">
+                                <option value="Select Course">--- Select Course ---</option>
+                                <option value="Angular">Online Web Developer Course on 'Angular'</option>
+                                <option value=" React">Online Web Developer Course on'React'Development</option>
+                                <option value="Manual & Automation Testing">Manual & Automation Testing</option>
+                                <option value="Complete Java">Complete Java</option>
+                                <option value="Data Science With Python">Data Science With Python</option>
+                            </select>
+                        </li>
+                    </div>
+                    <div>
+                        <li>
+                            <select id="name">
+                                <option value="Select Degree">--- Select Degree ---</option>
+                                <option value="M.Tech/B.Tech">M.Tech/B.Tech</option>
+                                <option value="MCA/MSc(CS,IT & EC)">MCA/MSc(CS,IT & EC)</option>
+                                <option value="BSc/BCA/BCom/Dip(CS,IT & EC)">BSc/BCA/BCom/Dip(CS,IT & EC)</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </li>
+                    </div>
+                    <div>
+                        <li><input type="text" placeholder=Comments id="name"></li>
+                        <div class="button1">
+                            <input type="Submit" value="REGISTER">
+                        </div>
+                    </div>
+                </ul>
+            </form>
+        </div>
+    </div>
+</body>

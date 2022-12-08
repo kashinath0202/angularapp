@@ -2,8 +2,11 @@ input.ng-invalid.ng-touched{
    border-color: red;
 }
 
+h2{
+  color: rgb(152, 239, 52);
+}
 
-.formAlign{
-  align-items: center;
- 
+
+span{
+  color: red;
 }
