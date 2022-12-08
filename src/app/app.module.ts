@@ -41,6 +41,7 @@ import { LifeCycleHookChildComponent } from './life-cycle-hook-child/life-cycle-
 import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycle-hook-parent.component';
 import { FormsPracticeComponent } from './forms-practice/forms-practice.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
+import { PracticeComponent } from './practice/practice.component';
 
 
 
@@ -87,7 +88,8 @@ import { TemplateFormComponent } from './template-form/template-form.component';
   LifeCycleHookChildComponent,
   LifeCycleHookParentComponent,
   FormsPracticeComponent,
-  TemplateFormComponent
+  TemplateFormComponent,
+  PracticeComponent
   ],
 
 

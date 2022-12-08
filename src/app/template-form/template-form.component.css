@@ -1,6 +1,6 @@
 input.ng-invalid.ng-touched{
     border-color: red;
-    box-shadow: 20px 20px 50px 10px rgb(207, 90, 109) inset;
+    box-shadow: 20px 20px 50px 10px rgb(226, 156, 167) inset;
 }
 
 .container{
@@ -8,10 +8,22 @@ input.ng-invalid.ng-touched{
 }
 
 label{
-    color: rgb(238, 13, 13);
+    color: rgb(223, 26, 32);
     font-size: 20px;
 }
 button{
     margin-left: 140px;
     width: 100px;
+}
+span{
+    color: red;
+}
+form{
+    margin-left:-40px;
+}
+h2{
+   
+    text-shadow: 5px 5px 10px rgb(224, 43, 43);
+    font-weight: 800;
+   
 }

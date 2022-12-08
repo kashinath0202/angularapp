@@ -3,30 +3,34 @@
         <div class="col-md-8 text-left rounded shadow py-5">
 
             <form #logForm="ngForm" (ngSubmit)="signInForm(logForm)">
-                <h2 >Sign in Form</h2>
+                <h2>Simple Form</h2>
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label>Email ID</label>
-                        <input class="form-control" type="text" email placeholder="Enter your Email Address" name="email Address"
-                        required  ngModel>
+                        <input class="form-control" type="text" email placeholder="Enter your Email Address"
+                            name="email Address" required ngModel #email="ngModel"><span
+                            *ngIf="email.touched && !email.valid">Please enter valid email ID</span>
                     </div>
                     <div class="form-group col-md-5">
                         <label for="password">Password</label>
-                        <input type="password" class="form-control" name="Password" id="password" placeholder="Enter Password" required  ngModel>
+                        <input type="password" class="form-control" name="Password" id="password"
+                            placeholder="Enter Password" required ngModel>
                     </div>
                 </div>
                 <div class="form-group col-md-5">
                     <label for="address">Address</label>
-                    <input type="text" class="form-control" id="address" name="Address" placeholder="1234 Main Road" required  ngModel>
+                    <input type="text" class="form-control" id="address" name="Address" placeholder="1234 Main Road"
+                        required ngModel>
                 </div>
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="city">City</label>
-                        <input type="text" class="form-control" name="City"  id="city" required  ngModel>
+                        <input type="text" class="form-control" name="City" id="city" required ngModel #city="ngModel">
+                        <span *ngIf="city.touched && !city.valid">Please enter enter your city name</span>
                     </div>
                     <div class="form-group col-md-5">
                         <label for="state">State</label>
-                        <select  id="state" name="State" class="form-control"  required  ngModel>
+                        <select id="state" name="State" class="form-control" required ngModel>
                             <option disabled selected>--Select--</option>
                             <option>Maharashtra</option>
                             <option>Karanataka</option>
@@ -36,7 +40,7 @@
                     </div>
                     <div class="form-group col-md-2">
                         <label for="zip">Pin Code</label>
-                        <input  maxlength="6" name="ZipCode" class="form-control" id="zip" required  ngModel>
+                        <input maxlength="6" name="ZipCode" class="form-control" id="zip" required ngModel>
                     </div>
                 </div>
                 <div class="form-group">
@@ -45,10 +49,8 @@
                         <label class="form-check-label" for="Check">Check me out</label>
                     </div>
                 </div>
-                <button type="submit" class="btn btn-primary"  [disabled]="!logForm.valid">Sign in</button>
+                <button type="submit" class="btn btn-primary" [disabled]="!logForm.valid">Sign in</button>
             </form>
         </div>
     </div>
 </div>
-
-
