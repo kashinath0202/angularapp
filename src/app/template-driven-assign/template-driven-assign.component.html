@@ -1,0 +1,50 @@
+<!-- Add a Form with the following Inputs (and Validators)
+ 1) Mail address (should not be empty and should be an email address)
+ 2) A Dropdown which allows the user to select from three different Subscriptions ("Basic", "Advanced", "Pro")
+ Set "Advanced" as Default
+ 3) A Password field (should not be empty) field)
+ 4) A Submit Button Display a warning message if the Form is invalid AND was touched. 
+    Display a warning message below each input if it's invalid.Upon submitting the form, 
+    you should simply print the Value of the Form to the Console.Optionally, display it in your template. -->
+
+
+
+<div class="container mt-sm-5">
+    <div class="row justify-content-center">
+        <div class="formClass col-md-6 text-left rounded shadow py-3">
+            <div class="formBack">
+                <form #regForm="ngForm" (ngSubmit)="onSubmitForm(regForm)">
+
+                    <h2>Template Driven Form Assignment</h2>
+                    <div class="emailBlock mt-sm-2">
+                        <label for="mail">Email ID</label>
+                        <input class="form-control " placeholder="Enter your email ID" type="email" required
+                            name="email" email ngModel #email="ngModel">
+                        <span *ngIf="!email.valid && email.touched">Please Enter valid email Address,for
+                            eg.-abc@gmail.com</span>
+                    </div>
+
+                    <div class="dropDown mt-sm-2">
+                        <label for="">Subscriptions</label>
+                        <select name="subscriptions" id="" class="form-control" ngModel [ngModel]="byDefault">
+                            <option disabled value=" Select">-- Select--</option>
+                            <option value="Basic">Basic</option>
+                            <option value="Advanced">Advanced</option>
+                            <option value="Pro">Pro</option>
+                        </select>
+                    </div>
+
+                    <div class="pass mt-sm-2">
+                        <label for="pass">Password</label>
+                        <input class="form-control" type="password" id="pass" placeholder="Enter your password"
+                            name="password" minlength="8" maxlength="8" required ngModel #password="ngModel">
+                        <span *ngIf="!password.valid && password.touched">Please enter Minimum 8 Characters</span>
+                    </div>
+                    <div class="submit mt-sm-3" style="margin-left: 200px;">
+                        <button class="btn btn-success" type="submit" [disabled]="!regForm.valid">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
