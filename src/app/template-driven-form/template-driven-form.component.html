@@ -1,0 +1,197 @@
+<div class="container">
+    <div class="container">
+        <div class="row ">
+            <div class="formClass col-md-8 text-left rounded shadow ">
+                <div class="img">
+                    <form #regForm="ngForm" (ngSubmit)="registration(regForm)">
+
+
+                        <h2 style="margin-left: 230px; padding-bottom: 20px;">Employee Registration Form</h2>
+                        <div ngModelGroup="userDetails" #userDetails="ngModelGroup">
+                            <div class="userNameDetails">
+                                <div class="form-group col-md-4" style="margin-left: 80px; ">
+                                    <div class="form-group">
+                                        <label for="fname">First Name</label>
+                                    </div>
+                                    <input type="text" name="FirstName" id="fName" placeholder="Enter your first name"
+                                        required ngModel>
+                                </div>
+
+                                <div class="form-group col-md-4" style="margin-left: 350px; margin-top: -54px;">
+                                    <div class="form-group">
+                                        <label for="fname">Middle Name</label>
+                                    </div>
+                                    <input type="text" name="MiddleName" id="mName"
+                                        placeholder="Enter your middle name" required ngModel>
+                                </div>
+
+                                <div class="form-group col-md-4" style="margin-left: 600px; margin-top: -54px;">
+                                    <div class="form-group">
+                                        <label for="fname">Last Name</label>
+                                    </div>
+                                    <input type="text" name="LastName" id="lName" placeholder="Enter your last name"
+                                        required ngModel>
+                                </div>
+                            </div>
+                            <span *ngIf="!userDetails.valid && userDetails.touched">Please enter valid details</span>
+                        </div>
+
+                        <div class="onlineInfo">
+                            <div class="form-group col-md-4" style="margin-left: 80px; margin-top:35px;">
+                                <div class="form-group">
+                                    <label for="email">Email ID</label>
+                                </div>
+                                <input type="email" name="EmailID" id="email" email placeholder="Enter your email ID"
+                                    required ngModel #email="ngModel">
+                                <span *ngIf="email.touched && !email.valid">Please enter your email ID</span>
+                            </div>
+                            <div class="form-group col-md-4" style="margin-left: 500px; margin-top: -54px;">
+                                <div class="form-group">
+                                    <label for="email">Mobile Number</label>
+                                </div>
+                                <input type="number" name="MobileNumber" id="number" placeholder="Enter Mobile Number"
+                                    required ngModel #number="ngModel"><span
+                                    *ngIf="number.touched && !number.valid">Please enter your contact number</span>
+                            </div>
+                        </div>
+
+                        <div class="otherInfo">
+                            <div class="form-group col-md-4" style="margin-left: 80px; margin-top:43px;">
+                                <div class="form-group">
+                                    <label for="DOB">Date Of Birth</label>
+                                </div>
+                                <input type="date" name="DateOfBirth" id="dateOfBirth" required ngModel>
+                            </div>
+                            <div class="form-group col-md-4" style="margin-left: 280px; margin-top: -30px;">
+                                <div class="form-group">
+                                    <label for="male">Gender -</label>
+                                    &nbsp; &nbsp;
+                                    <input type="radio" name="Gender" id="male" ngModel>
+                                    <label for="male">Male</label>
+                                    &nbsp;
+                                    <input type="radio" name="Gender" id="female" ngModel>
+                                    <label for="female">Female</label>
+                                </div>
+                            </div>
+
+                            <div class="form-group col-md-4" style="margin-left: 540px; margin-top: -25px;">
+                                <div class="form-group">
+                                    <label for="married">is Married -</label>
+                                    &nbsp; &nbsp;
+                                    <input type="radio" name="isMarried" id="married" required ngModel>
+                                    <label for="yes">YES</label>
+                                    &nbsp;
+                                    <input type="radio" name="isMarried" id="married" required ngModel>
+                                    <label for="no">NO</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div ngFormGroup="userTechnicalStack">
+
+                            <div class="form-group col-md-10" style="margin-left: 80px; margin-top:43px;">
+                                <label for="DOB">Known Tools & Technology - </label>
+                                &nbsp; &nbsp;
+                                <input type="checkbox" name="TechnologyStack" id="angular" required ngModel>
+                                &nbsp;
+                                <label for="Angular">Angular</label>
+                                &nbsp;
+                                <input type="checkbox" name="TechnologyStack" id="react" required ngModel>
+                                &nbsp;
+                                <label for="React">React</label>
+                                &nbsp;
+                                <input type="checkbox" name="TechnologyStack" id="python" required ngModel>
+                                &nbsp;
+                                <label for="Python"> Python </label>
+                                &nbsp;
+                                <input type="checkbox" name="TechnologyStack" id="java" required ngModel>
+                                &nbsp;
+                                <label for="Java">Java</label>
+                                &nbsp;
+                                <input type="checkbox" name="TechnologyStack" id="database" required ngModel>
+                                &nbsp;
+                                <label for="Database">Database</label>
+                            </div>
+
+
+                            <div class="devRoll">
+                                <div style="margin-left: 80px; margin-top:43px;">
+                                    <label for="roll">Emp.Roll</label>
+                                    &nbsp;
+                                    <select class="custom-select custom-select-lg mb-3" style="width: 250px;">
+                                        <option value="UI Developer" id="roll">UI Developer</option>
+                                        <option value="BackEnd Developer" id="roll">BackEnd Developer</option>
+                                        <option value="Full Stack Developer" id="roll">Full Stack Developer</option>
+                                        <option value="QA Tester" id="roll">QA Tester</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div ngModelGroup="userAddress" #userAddress="ngModelGroup">
+                            <div class="location">
+                                <div style="margin-left: 470px; margin-top:-43px;">
+                                    <label for="roll">State</label>
+                                    &nbsp;
+                                    <select class="custom-select custom-select-lg mb-3" style="width: 250px;">
+                                        <option value="Maharashtra" id="location">Maharashtra</option>
+                                        <option value="Karanataka" id="location">Karanataka</option>
+                                        <option value="Gujarat" id="location">Gujarat</option>
+                                        <option value="Keral" id="location">Keral</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="form-group col-md-4" style="margin-left: 80px;  margin-top:43px;">
+                                <div class="form-group">
+                                    <label for="pAddress">Permanent Address</label>
+                                </div>
+                                <input type="text" name="PermanentAddress" id="pAddress"
+                                    placeholder="Enter your permanent address..." required ngModel>
+                            </div>
+
+                            <div class="form-group col-md-4" style="margin-left: 370px; margin-top: -54px;">
+                                <div class="form-group">
+                                    <label for="pin">Pin Code</label>
+                                </div>
+                                <input type="number" name="PinCode" id="pin" placeholder="Enter your pin code" required
+                                    ngModel>
+                            </div>
+                           <span *ngIf="!userAddress.valid && userAddress.touched">Please enter valid Address</span>
+                        </div>
+                        <div class="form-group col-md-4" style="margin-left: 600px; margin-top: -54px;">
+                            <div class="form-group">
+                                <label for="comment">Comment</label>
+                            </div>
+                            <input type="text" name="Comment" id="comment" placeholder="Comments..." required ngModel>
+                        </div>
+                        <div class="contols" style="margin-left: 250px; margin-top: 50px;">
+                            <button type="submit" class="btn btn-success">Submit</button>
+                        </div>
+                        <div style="margin-left: 500px; margin-top: -40px;">
+                            <button type="button" class="btn btn-danger">Reset</button>
+                        </div>
+
+                        <!-- <div class="img2" *ngIf="empDataShow">
+                        <div class="row justify-content-center"  style="margin-top:700px;">
+                            <div class="formClass col-md-6 text-left rounded shadow ">
+                        <div class="saveData">
+                               <h3 style="text-align: center;">Employee Data</h3>
+                               <p >First Name-<strong>{{employee.FirstName}}</strong></p>
+                               <p>Middle Name-<strong>{{employee.MiddleName}}</strong></p>
+                               <p>Last Name-<strong>{{employee.LastName}}</strong></p>
+                               <p>Date Of Birth-<strong>{{employee.DateOfBirth}}</strong></p>
+                               <p>Email ID-<strong>{{employee.EmailID}}</strong></p>
+                               <p>Mobile No. -<strong>{{employee.MobileNumber}}</strong></p>
+                               <p>P.Address-<strong>{{employee.PermanentAddress}}</strong></p>
+                               <p>Pin Code-<strong>{{employee.PinCode}}</strong></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div> -->
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

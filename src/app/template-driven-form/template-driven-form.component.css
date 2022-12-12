@@ -1,0 +1,39 @@
+#email{
+    width: 295px;
+}
+#number{
+    width: 295px;
+}
+#pAddress{
+    width:250px;
+}
+
+/* input.ng-invalid.ng-touched{
+    border-color: rgb(240, 21, 21);
+    box-shadow: 0px 0px 10px 0px rgb(243, 9, 44) inset;
+} */
+
+span{
+   color: red;
+}
+
+label{
+    color: rgb(40, 22, 20);
+    font-weight: 600;
+}
+
+h2{
+    text-shadow: 5px 5px 10px rgb(51, 185, 10);
+}
+
+.img{
+    background-image: url(D:\Angular\angularapp\src\assets\images\regForm11.jpg);
+    height: 750px;
+    width: 1000px;
+   margin-top: 0px;
+  align-items: center;
+
+}
+.img2{
+    background-image: url(D:\Angular\angularapp\src\assets\images\data.jpg);
+}
