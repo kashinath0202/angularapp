@@ -28,4 +28,6 @@ export class TemplateFormComponent implements OnInit {
   //     this.isAction==false
   //   }
   // }
+
+  defaultValue:string='Keral'
 }
