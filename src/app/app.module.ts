@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,6 +42,10 @@ import { LifeCycleHookParentComponent } from './life-cycle-hook-parent/life-cycl
 import { FormsPracticeComponent } from './forms-practice/forms-practice.component';
 import { TemplateFormComponent } from './template-form/template-form.component';
 import { PracticeComponent } from './practice/practice.component';
+import { TemplateDrivenFormComponent } from './template-driven-form/template-driven-form.component';
+import { TemplateDrivenFormPracticeComponent } from './template-driven-form-practice/template-driven-form-practice.component';
+import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
+import { TemplateDrivenAssignComponent } from './template-driven-assign/template-driven-assign.component';
 
 
 
@@ -66,7 +70,9 @@ import { PracticeComponent } from './practice/practice.component';
   NgSwitchDirectiveComponent,
   StructuralDirectiveComponent,
   AttributeDirectiveComponent,
+
   CustomDireDirective,
+  
   BindingPracticeComponent,
   DecoratorParentComponent,
   DecoratorChildComponent,
@@ -89,7 +95,11 @@ import { PracticeComponent } from './practice/practice.component';
   LifeCycleHookParentComponent,
   FormsPracticeComponent,
   TemplateFormComponent,
-  PracticeComponent
+  PracticeComponent,
+  TemplateDrivenFormComponent,
+  TemplateDrivenFormPracticeComponent,
+  ReactiveFormsComponent,
+  TemplateDrivenAssignComponent,
   ],
 
 
@@ -98,7 +108,8 @@ import { PracticeComponent } from './practice/practice.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule
   ],
 
 
