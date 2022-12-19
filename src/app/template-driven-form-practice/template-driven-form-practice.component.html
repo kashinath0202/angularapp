@@ -1,0 +1,118 @@
+<div class="conatainer">
+    <div class="row justify-content-center">
+        <div class="col-md-5 text-left rounded shadow py-2">
+
+            <form #empForm="ngForm" (ngSubmit)="employeeSubmit(empForm)">
+
+                <h2>Simple Form Using Validations</h2>
+                <div class="col-md-8">
+                    <label for="uName">Username</label>
+                    <input class="form-control" type="text" name="Username" id="uName"
+                        placeholder="Enter your your username" required ngModel #username="ngModel"
+                        pattern="^[a-zA-Z0-9]+@yahoo.com">
+                    <span *ngIf="username.touched && !username.valid">Please enter Valid
+                        Username,for.eg-@yahoo.com</span>
+                </div>
+
+                <div class="col-md-8 ">
+                    <label for="pass">Password</label>
+                    <input class="form-control" type="password" name="password" id="pass"
+                        placeholder="Enter your password" maxlength="8" minlength="8" required ngModel
+                        #password="ngModel">
+                    <span *ngIf="!password.valid && password.touched"> please enter Minimum 8 Characters</span>
+                </div>
+
+
+                <div class="col-md-8">
+                    <label for="mail">Email ID</label>
+                    <input class="form-control" type="email" email name="email" id="mail" placeholder="abc@gmail.com"
+                        required ngModel #email="ngModel">
+                    <span *ngIf="!email.valid && email.touched">Please enter Valid email address</span>
+                </div>
+
+                <div class="col-md-8">
+                    <label for="DOB">Date Of Birth</label>
+                    <input class="form-control" type="date" name="DateOfBirth" id="DOB" ngModel>
+                </div>
+                <label for="">Gender -</label>
+                <div *ngFor="let gender of genders" class="col-md-8" style="margin-left: 60px;">
+                    <input type="radio" name="gender" id="{{gender.id}}" value="{{gender.value}}" required ngModel
+                        [ngModel]="defaultGender">
+                    <label for="{{gender.id}}">{{gender.value}}</label>
+                </div>
+
+                <div class="lang" style="margin-left:200px; margin-top: -80px;">
+                    <label for="">Languages Know -</label>
+                </div>
+
+                <div *ngFor="let language of languages" class="col-md-8" style="margin-left: 350px;">
+                    <input type="checkbox" name="language" id="{{language.id}}" value="{{language.value}}" required
+                        ngModel>
+                    <label for="{{language.id}}">{{language.value}}</label>
+                </div>
+
+                <div ngModelGroup="allAddress" #allAddress="ngModelGroup">
+
+                    <div class="col-md-8">
+                        <label for="state">State</label>
+                        <select class="form-control" name="State" id="state" ngModel [ngModel]="byDefault">
+                            <option disabled value="default">-- Select --</option>
+                            <option value="Maharashtra">Maharashtra</option>
+                            <option value="Karanataka">Karanataka</option>
+                            <option value="Uttar Pradesh">Uttar Pradesh</option>
+                            <option value="Gujarat">Gujarat</option>
+                            <option value="Keral">Keral</option>
+                            <option value="Madhy Pradesh">Madhy Pradesh</option>
+                            <option value="Tamilnadu">Tamilnadu</option>
+                            <option value="Goa">Goa</option>
+                        </select>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="address">Permanent Address</label>
+                        <input class="form-control" type="text" name="Address" id="address"
+                            placeholder="Main Road pune..." required ngModel>
+                    </div>
+
+                    <div class="col-md-8">
+                        <label for="pinCode">Pin Code</label>
+                        <input class="form-control" type="number" name="pinCode" id="pinCode"
+                            placeholder="Enter your pin code..." maxlength="6" required ngModel>
+                    </div>
+                    <span *ngIf="!allAddress.valid && allAddress.touched">Please Fill Complete Address</span>
+                </div>
+
+                <div class="col-md-8">
+                    <label for="">Registration Data</label>
+                    <input class="form-control" type="date" min="2022-12-10" required ngModel>
+
+
+                </div>
+
+                <div class="submitForm mt-sm-3">
+                    <button type="submit" class="btn btn-primary" [disabled]="!empForm.valid">Submit</button>
+                </div>
+
+                <div class="resetButton" style="margin-left: 350px; margin-top: -37px;">
+                    <button class="btn btn-warning" type="reset">Reset</button>
+                </div>
+            </form>
+            <!-- <div class="conatainer">
+                <div class="row justify-content-center">
+                    <div class="col-md-5 text-left rounded shadow py-5">
+                        <h3>Employee Data</h3>
+                        <p> Username <strong>{{employee.Username}}</strong></p>
+                        <p> Password <strong>{{employee.password}}</strong></p>
+                        <p> Email ID <strong>{{employee.email}}</strong></p>
+                        <p> DateOfBirth <strong>{{employee.DateOfBirth}}</strong></p>
+                        <p> gender <strong>{{employee.gender}}</strong></p>
+                        <p> language <strong>{{employee.language}}</strong></p>
+                        <p> Address <strong>{{employee.Address}}</strong></p>
+                        <p> State <strong>{{employee.State)}}</strong></p>
+                        <p> pinCode <strong>{{employee.pinCode}}</strong></p>
+                    </div>
+                </div>
+            </div> -->
+        </div>
+    </div>
+</div>

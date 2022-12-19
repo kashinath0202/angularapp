@@ -1,0 +1,23 @@
+h2{
+
+    text-shadow: 5px 5px 10px rgb(10, 244, 108);
+
+}
+
+input.ng-invalid.ng-touched{
+    border-color: rgb(69, 14, 26);
+    box-shadow:0px 0px 10px inset red ;
+}
+
+span{
+    color: red;
+}
+
+label{
+    color: brown;
+    font-size: larger;
+    font-style: italic;
+}
+form{
+    background-image: url(D:\Angular\angularapp\src\assets\images\reg5.jpg);
+}
