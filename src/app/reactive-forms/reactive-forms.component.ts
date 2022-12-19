@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-reactive-forms',
@@ -22,12 +24,12 @@ export class ReactiveFormsComponent implements OnInit {
 
   this.reactiveForm = new FormGroup({
        
-      'userName':  new  FormControl('',[Validators.required,this.NaNames.bind(this)]),
-      'email': new FormControl('',[Validators.required,Validators.email]),
+      'userName': new FormControl('',[Validators.required,this.NaNames.bind(this)]),
+      'email': new FormControl('',[Validators.required,Validators.email],this.NaEmails),
       'course': new FormControl('Angular',Validators.required),
       'Gender':new FormControl('Male',Validators.required),
       
-      //Form Groups
+      // using addressDetails Form Group
 
       'addressDetails':new FormGroup({
       'paramentAddress': new FormControl('',[Validators.required]),
@@ -41,14 +43,17 @@ export class ReactiveFormsComponent implements OnInit {
     
   }
 
+    // For Using Genders
+
   genders=[
     {'id':'1',value:'Male'},
     {'id':'2',value:'Female'}
     
   ]
 
-  notAllowedNames=['CodeMind','Technology']
+         // Custom Validation
 
+  notAllowedNames=['CodeMind','Technology','kashi',]
 
   NaNames(control:FormControl){
         
@@ -58,4 +63,20 @@ export class ReactiveFormsComponent implements OnInit {
     return null;
   }
 
+
+  // custom AsyncValidator (Email)
+
+  NaEmails(control:FormControl): Promise<any>  | Observable<any> {
+        const myResponse = new Promise<any> ((resolve,reject) => {
+
+          setTimeout(() => {
+             if(control.value === 'kashi@gmail.com'){
+             resolve({'emailNotAllowed':true});
+                } else {
+                  resolve(null);
+               }
+           },2000);
+         })
+      return myResponse;
+    }
 }

@@ -18,3 +18,4 @@ export class CustomDireDirective {
    }
 
 }
+                   //AttributeDirectiveComponent  show the component
