@@ -46,6 +46,8 @@ import { TemplateDrivenFormComponent } from './template-driven-form/template-dri
 import { TemplateDrivenFormPracticeComponent } from './template-driven-form-practice/template-driven-form-practice.component';
 import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.component';
 import { TemplateDrivenAssignComponent } from './template-driven-assign/template-driven-assign.component';
+import { TemplateFormMyComponent } from './template-form-my/template-form-my.component';
+import { ReactiveFormMyComponent } from './reactive-form-my/reactive-form-my.component';
 
 
 
@@ -100,6 +102,8 @@ import { TemplateDrivenAssignComponent } from './template-driven-assign/template
   TemplateDrivenFormPracticeComponent,
   ReactiveFormsComponent,
   TemplateDrivenAssignComponent,
+  TemplateFormMyComponent,
+  ReactiveFormMyComponent,
   ],
 
 

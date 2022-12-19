@@ -3,25 +3,35 @@
         <div class="col-md-4 text-left rounded shadow py-2">
 
             <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
-                <h2>Reactive Form</h2>
+                <h2>Reactive Form</h2>                                         
 
                 <div class="col-md-7 py-2">
                     <label for="">Username</label>
                     <input class="form-control" type="text" formControlName="userName"
                         placeholder="Enter your username">
-                          <span *ngIf="!reactiveForm.get('userName').valid && reactiveForm.get('userName').touched">
-                         <span *ngIf="reactiveForm.get('userName').errors['namesNotAllowed']">Please enter valid Username</span>
-                        </span>
+                          <small *ngIf="!reactiveForm.get('userName').valid && reactiveForm.get('userName').touched">
+                            <span *ngIf="reactiveForm.get('userName').errors['required']"> Please enter valid Username</span>
+                             <span *ngIf="reactiveForm.get('userName').errors['namesNotAllowed']">{{reactiveForm.get('userName').value}} - is not allowed</span>
+                          </small>
                 </div>
-                <div class="col-md-7 py-2">
-                    <label for="">Password</label>
-                    <input id="pass" class="form-control" type="email" formControlName="email"
-                        placeholder="Enter your email ID">
-                    <span *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched">
-                        Please enter valid email address
-                    </span>
-                </div>
-
+                <div class="form-group py-2">
+                    <input type="text" class="form-control" name="" id="" formControlName="email"
+                        placeholder="Enter email">
+                         <small class="text-danger" *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> 
+                        <small *ngIf="reactiveForm.get('email').errors['emailNotAllowed']">Email not allowed {{reactiveForm.get('email').value}}</small>
+                        Please enter valid email
+                    </small>
+                    </div>
+                <!-- <div class="col-md-7 py-2">
+                    
+                    <label >Email ID</label>
+                    <input  class="form-control" type="email" formControlName="email" placeholder="Enter your email ID">
+                <small *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched">
+               <span *ngIf="reactiveForm.get('email').errors['required']">Please enter valid email ID</span> 
+                <span *ngIf="reactiveForm.get('email').errors['emailNotAllowed']">{{reactiveForm.get('email').value}} - is email ID not allowed</span>
+                </small>
+               
+            </div>         -->
                 <div class="col-md-7">
                     <label for="allCourse">Course</label>
                     <select class="form-control" id="allCourse" formControlName="course">
@@ -56,15 +66,14 @@
 
                 </div>
                 <div class="button py-2">
-                    <button class="btn btn-success ml-sm-5" [disabled]="!reactiveForm.valid">Submit</button>
+                    <button class="btn btn-success ml-sm-5" >Submit</button>
                 </div>
 
-            </form>
+            </form>           
         </div>
     </div>
 </div>
 
 
 
-  
-<!-- <span *ngIf="ReactiveForm.get('username').errors['required']">Please enter valid Username</span> -->
+<!-- [disabled]="!reactiveForm.valid" -->
