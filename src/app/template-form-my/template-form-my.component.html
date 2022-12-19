@@ -1,0 +1,190 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-left rounded shadow py-2">
+            <form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+                <h4 style="text-align: center;">Template Reactive Form</h4>
+                <div ngModelGroup="UserDetails">
+                    <div class="row">
+                        <div class="col">
+                            <label for="fName">First Name</label>
+                            <input class="form-control" type="text" id="fName" placeholder="Enter First name"
+                                name="FirstName" ngModel required #fstName="ngModel">
+                            <span *ngIf="!fstName.valid && fstName.touched">*Please enter First name</span>
+                        </div>
+                        <div class="col">
+                            <label for="mName">Middle Name</label>
+                            <input class="form-control" type="text" id="mName" placeholder="Enter Middle name"
+                                name="MiddleName" ngModel required #mdName="ngModel">
+                            <span *ngIf="mdName.invalid && mdName.touched">*Please enter Middle name</span>
+                        </div>
+                        <div class="col">
+                            <label for="lNAme">Last Name</label>
+                            <input class="form-control" type="text" id="lNAme" placeholder="Enter Last name"
+                                name="LastName" ngModel required #lstName="ngModel">
+                            <span *ngIf="lstName.invalid && lstName.touched">*Please enter Last name</span>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="dob">Date of birth</label>
+                            <input class="form-control" type="date" id="dob" name="DateOfBirth" ngModel required
+                                #dob="ngModel">
+                            <span *ngIf="dob.invalid && dob.touched">DOB is required</span>
+                        </div>
+                        <div class="col">
+                            <label for="age">Age</label>
+                            <input class="form-control" type="number" id="age" placeholder="Enter your age" name="age"
+                                min="18" max="21" ngModel required #age="ngModel">
+                            <span *ngIf="age.invalid && age.touched">Age is required</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="uName">Username</label>
+                        <input class="form-control" type="text" id="uName" placeholder="Enter Username name"
+                            name="Username" pattern="^[a-zA-Z0-9]+@kashi.com" ngModel required #uName="ngModel">
+                        <span *ngIf="uName.invalid && uName.touched">this field is required,for eg.-abc@kashi.com</span>
+                    </div>
+                    <div class="col">
+                        <label for="email">Email ID</label>
+                        <input class="form-control" type="email" id="email" placeholder="Enter Email ID" name="EmailID"
+                            email ngModel required #emailId="ngModel">
+                        <span *ngIf="emailId.invalid && emailId.touched">Please Enter Valid email ID</span>
+                    </div>
+                    <div class="col">
+                        <label for="moNumber">Mobile Number</label>
+                        <input class="form-control" type="number" id="moNumber" placeholder="Enter Mobile No..."
+                            name="MobileNumber" ngModel required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="">Gender-</label>
+                    </div>
+                    <div class="col" *ngFor="let gender of genders">
+                        <input type="radio" name="Gender" id="{{gender.id}}" value="{{gender.value}}" required ngModel
+                            [ngModel]="defaultGender">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div>
+                    <div class="col-md-7">
+                        <label for="Stack">Technical Stacks - </label>
+                        <input class="form-check-input" type="checkbox" id="Stack">
+                        <label for="Stack">HTML5</label>
+                        <input class="form-check-input" type="checkbox" id="Stack">
+                        <label for="Stack">CSS</label>
+                        <input class="form-check-input" type="checkbox" id="Stack">
+                        <label for="Stack">JavaScript</label>
+                        <!-- <input class="form-check-input" type="checkbox" id="Stack">
+                        <label for="">TypeScript</label> -->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="roll">Developer Roll</label>
+                        <select class="form-control" name="DeveloperRoll" id="roll" ngModel required
+                            [ngModel]="defaultRoll">
+                            <option id="roll" value="Front End Developer">Front End Developer</option>
+                            <option id="roll" value="Back End Developer">Back End Developer</option>
+                            <option id="roll" value="Full Stack Developer">Full Stack Developer</option>
+                        </select>
+                    </div>
+
+                    <div ngModelGroup="addressDetails" #addressDetails="ngModelGroup">
+                        <div class="col">
+                            <label for="dist">District</label>
+                            <select class="form-control" name="District" id="dist" ngModel required
+                                [ngModel]="defaultDist">
+                                <option value="" disabled>--Select--</option>
+                                <option name="dist" id="dist">Solapur</option>
+                                <option name="dist" id="dist">Kolhapur</option>
+                                <option name="dist" id="dist">Sangali</option>
+                                <option name="dist" id="dist">Satara</option>
+                                <option name="dist" id="dist">Usmanabad</option>
+                                <option name="dist" id="dist">Ourngabad</option>
+                                <option name="dist" id="dist">Pune</option>
+                                <option name="dist" id="dist">Nashik</option>
+                                <option name="dist" id="dist">Raygad</option>
+                            </select>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-7">
+                                <label for="address">Permanent Address</label>
+                                <input class="form-control" type="text" name="PermanentAddress"
+                                    placeholder="Enter Permanent Address" id="address" ngModel required>
+                            </div>
+                            <div class="col">
+                                <label for="city">City</label>
+                                <input class="form-control" type="text" id="city" name="City"
+                                    placeholder="Enter City Name" ngModel required>
+                            </div>
+                            <div class="col">
+                                <label for="pin">Pin Code</label>
+                                <input class="form-control" type="text" id="pin" name="PinCode"
+                                    placeholder="Enter pin Code" ngModel required>
+                            </div>
+                        </div>
+                        <span *ngIf="addressDetails.invalid && addressDetails.touched"> Please fill all address</span>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" style="margin-left: 150px;" class="btn btn-success"
+                            [disabled]="!myForm.valid">Submit</button>
+                    </div>
+                    <div class="col">
+                        <button type="reset" style="margin-left: 150px;" class="btn btn-danger">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<div class="container" *ngIf="tableDataShow">
+    <h2>Employee Data</h2>
+    <table class="table table-striped table-dark">
+        <thead>
+            <tr>
+                <th>Sr.NO</th>
+                <th>First Name</th>
+                <th>Middle Name</th>
+                <th>Last Name </th>
+                <th>Date Of birth</th>
+                <th>Age</th>
+                <th>Username</th>
+                <th>Email Id</th>
+                <th>Mobile Number </th>
+                <th>Gender</th>
+                <th>Developer Roll</th>
+                <th>District</th>
+                <th>Permanent Address</th>
+                <th>City</th>
+                <th>Pin Code</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let data of userData; let i=index">
+                <td>{{i+1}}</td>
+                <td>{{data.FirstName}}</td>
+                <td>{{data.MiddleName}}</td>
+                <td>{{data.LastName}}</td>
+                <td>{{data.DateOfBirth}}</td>
+                <td>{{data.age}}</td>
+                <td>{{data.Username}}</td>
+                <td>{{data.EmailID}}</td>
+                <td>{{data.MobileNumber}}</td>
+                <td>{{data.Gender}}</td>
+                <td>{{data.DeveloperRoll}}</td>
+                <td>{{data.District}}</td>
+                <td>{{data.PermanentAddress}}</td>
+                <td>{{data.City}}</td>
+                <td>{{data.PinCode}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <div>
+    </div>
+</div>
