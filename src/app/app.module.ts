@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import{HttpClientModule} from '@angular/common/http'
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -48,9 +50,12 @@ import { ReactiveFormsComponent } from './reactive-forms/reactive-forms.componen
 import { TemplateDrivenAssignComponent } from './template-driven-assign/template-driven-assign.component';
 import { TemplateFormMyComponent } from './template-form-my/template-form-my.component';
 import { ReactiveFormMyComponent } from './reactive-form-my/reactive-form-my.component';
+import { ServiceComponentOneComponent } from './service-component-one/service-component-one.component';
+import { ServiceComponentTwoComponent } from './service-component-two/service-component-two.component';
 
-
-
+import { DemoFirstService } from './servicess/demo-first.service';
+import { HttpAndObservableService } from './servicess/http-and-observable.service';
+import { HttpAndObservablesFirstComponent } from './http-and-observables-first/http-and-observables-first.component';
 
 
 
@@ -104,8 +109,10 @@ import { ReactiveFormMyComponent } from './reactive-form-my/reactive-form-my.com
   TemplateDrivenAssignComponent,
   TemplateFormMyComponent,
   ReactiveFormMyComponent,
+  ServiceComponentOneComponent,
+  ServiceComponentTwoComponent,
+  HttpAndObservablesFirstComponent
   ],
-
 
 
 
@@ -113,13 +120,15 @@ import { ReactiveFormMyComponent } from './reactive-form-my/reactive-form-my.com
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule                 // HttpClientModule 
   ],
 
 
-
-
-  providers: [],
+  providers: [
+    DemoFirstService,
+    HttpAndObservableService
+  ],
 
 
   
