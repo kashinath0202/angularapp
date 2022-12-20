@@ -1,0 +1,35 @@
+<body>
+
+<h3 style="text-align: center; color: brown;">service-component-one works!</h3>
+
+<button (click)="onClick()">Subscribed</button>
+
+   <!--  By access using Service -->
+
+<table class="table table-danger">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Product ID</th>
+            <th>Product Name</th>
+            <th>Product Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let allProduct of product; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{allProduct.id}}</td>
+            <td>{{allProduct.name}}</td>
+            <td>{{allProduct.price}}</td>
+        </tr>
+    </tbody>
+</table>
+
+   <!--  By access using Service -->
+           <!-- ngContainer -->
+<ng-container *ngFor="let allProduct of product;">
+    <p>Product Id :- <strong>{{allProduct.id}}</strong></p>
+    <p>Product Name :-  <strong>{{allProduct.name}}</strong></p>
+    <p>Product Price :- <strong>{{allProduct.price}}</strong></p>
+</ng-container>
+</body>
