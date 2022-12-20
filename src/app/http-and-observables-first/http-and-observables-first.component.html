@@ -1,0 +1,226 @@
+
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>User ID</th>
+            <th>User Name</th>
+            <th>Phone</th>
+            <th>Email ID</th>
+            <th colspan="3">Company</th>
+            <th>Website</th>
+            <th colspan="7">Address</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>BS</th>
+            <th>Catch Phrase</th>
+            <th>Name</th>
+            <th></th>
+            <th>City</th>
+            <th>Street</th>
+            <th>Suite</th>
+            <th>ZipCode</th>
+            <th colspan="2">Geography</th>
+        </tr>
+        <tr>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th>Latitude</th>
+            <th>Longitude</th>
+        </tr>
+        <tr>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+            <th>10</th>
+            <th>11</th>
+            <th>12</th>
+            <th>13</th>
+            <th>14</th>
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[0].id}}</td>
+            <td>{{allData[0].username}}</td>
+            <td>{{allData[0].phone}}</td>
+            <td>{{allData[0].email}}</td>
+            <td>{{allData[0].company.bs}}</td>
+            <td>{{allData[0].company.catchPhrase}}</td>
+            <td>{{allData[0].company.name}}</td>
+            <td>{{allData[0].website}}</td>
+            <td>{{allData[0].address.city}}</td> 
+            <td>{{allData[0].address.street}}</td> 
+            <td>{{allData[0].address.suite}}</td> 
+             <td>{{allData[0].address.zipcode}}</td> 
+            <td>{{allData[0].address.geo.lat}}</td> 
+            <td>{{allData[0].address.geo.lng}}</td>  
+        </tr>
+
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[1].id}}</td>
+            <td>{{allData[1].username}}</td>
+            <td>{{allData[1].phone}}</td>
+            <td>{{allData[1].email}}</td>
+            <td>{{allData[1].company.bs}}</td>
+            <td>{{allData[1].company.catchPhrase}}</td>
+            <td>{{allData[1].company.name}}</td>
+            <td>{{allData[1].website}}</td>
+            <td>{{allData[1].address.city}}</td> 
+            <td>{{allData[1].address.street}}</td> 
+            <td>{{allData[1].address.suite}}</td> 
+             <td>{{allData[1].address.zipcode}}</td> 
+            <td>{{allData[1].address.geo.lat}}</td> 
+            <td>{{allData[1].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[2].id}}</td>
+            <td>{{allData[2].username}}</td>
+            <td>{{allData[2].phone}}</td>
+            <td>{{allData[2].email}}</td>
+            <td>{{allData[2].company.bs}}</td>
+            <td>{{allData[2].company.catchPhrase}}</td>
+            <td>{{allData[2].company.name}}</td>
+            <td>{{allData[2].website}}</td>
+            <td>{{allData[2].address.city}}</td> 
+            <td>{{allData[2].address.street}}</td> 
+            <td>{{allData[2].address.suite}}</td> 
+             <td>{{allData[2].address.zipcode}}</td> 
+            <td>{{allData[2].address.geo.lat}}</td> 
+            <td>{{allData[2].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[3].id}}</td>
+            <td>{{allData[3].username}}</td>
+            <td>{{allData[3].phone}}</td>
+            <td>{{allData[3].email}}</td>
+            <td>{{allData[3].company.bs}}</td>
+            <td>{{allData[3].company.catchPhrase}}</td>
+            <td>{{allData[3].company.name}}</td>
+            <td>{{allData[3].website}}</td>
+            <td>{{allData[3].address.city}}</td> 
+            <td>{{allData[3].address.street}}</td> 
+            <td>{{allData[3].address.suite}}</td> 
+             <td>{{allData[3].address.zipcode}}</td> 
+            <td>{{allData[3].address.geo.lat}}</td> 
+            <td>{{allData[3].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[4].id}}</td>
+            <td>{{allData[4].username}}</td>
+            <td>{{allData[4].phone}}</td>
+            <td>{{allData[4].email}}</td>
+            <td>{{allData[4].company.bs}}</td>
+            <td>{{allData[4].company.catchPhrase}}</td>
+            <td>{{allData[4].company.name}}</td>
+            <td>{{allData[4].website}}</td>
+            <td>{{allData[4].address.city}}</td> 
+            <td>{{allData[4].address.street}}</td> 
+            <td>{{allData[4].address.suite}}</td> 
+             <td>{{allData[4].address.zipcode}}</td> 
+            <td>{{allData[4].address.geo.lat}}</td> 
+            <td>{{allData[4].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[5].id}}</td>
+            <td>{{allData[5].username}}</td>
+            <td>{{allData[5].phone}}</td>
+            <td>{{allData[5].email}}</td>
+            <td>{{allData[5].company.bs}}</td>
+            <td>{{allData[5].company.catchPhrase}}</td>
+            <td>{{allData[5].company.name}}</td>
+            <td>{{allData[5].website}}</td>
+            <td>{{allData[5].address.city}}</td> 
+            <td>{{allData[5].address.street}}</td> 
+            <td>{{allData[5].address.suite}}</td> 
+             <td>{{allData[5].address.zipcode}}</td> 
+            <td>{{allData[5].address.geo.lat}}</td> 
+            <td>{{allData[5].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[6].id}}</td>
+            <td>{{allData[6].username}}</td>
+            <td>{{allData[6].phone}}</td>
+            <td>{{allData[6].email}}</td>
+            <td>{{allData[6].company.bs}}</td>
+            <td>{{allData[6].company.catchPhrase}}</td>
+            <td>{{allData[6].company.name}}</td>
+            <td>{{allData[6].website}}</td>
+            <td>{{allData[6].address.city}}</td> 
+            <td>{{allData[6].address.street}}</td> 
+            <td>{{allData[6].address.suite}}</td> 
+             <td>{{allData[6].address.zipcode}}</td> 
+            <td>{{allData[6].address.geo.lat}}</td> 
+            <td>{{allData[6].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[7].id}}</td>
+            <td>{{allData[7].username}}</td>
+            <td>{{allData[7].phone}}</td>
+            <td>{{allData[7].email}}</td>
+            <td>{{allData[7].company.bs}}</td>
+            <td>{{allData[7].company.catchPhrase}}</td>
+            <td>{{allData[7].company.name}}</td>
+            <td>{{allData[7].website}}</td>
+            <td>{{allData[7].address.city}}</td> 
+            <td>{{allData[7].address.street}}</td> 
+            <td>{{allData[7].address.suite}}</td> 
+             <td>{{allData[7].address.zipcode}}</td> 
+            <td>{{allData[7].address.geo.lat}}</td> 
+            <td>{{allData[7].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[8].id}}</td>
+            <td>{{allData[8].username}}</td>
+            <td>{{allData[8].phone}}</td>
+            <td>{{allData[8].email}}</td>
+            <td>{{allData[8].company.bs}}</td>
+            <td>{{allData[8].company.catchPhrase}}</td>
+            <td>{{allData[8].company.name}}</td>
+            <td>{{allData[8].website}}</td>
+            <td>{{allData[8].address.city}}</td> 
+            <td>{{allData[8].address.street}}</td> 
+            <td>{{allData[8].address.suite}}</td> 
+             <td>{{allData[8].address.zipcode}}</td> 
+            <td>{{allData[8].address.geo.lat}}</td> 
+            <td>{{allData[8].address.geo.lng}}</td>  
+        </tr>
+        <tr *ngFor="let allData of userData">
+            <td>{{allData[9].id}}</td>
+            <td>{{allData[9].username}}</td>
+            <td>{{allData[9].phone}}</td>
+            <td>{{allData[9].email}}</td>
+            <td>{{allData[9].company.bs}}</td>
+            <td>{{allData[9].company.catchPhrase}}</td>
+            <td>{{allData[9].company.name}}</td>
+            <td>{{allData[9].website}}</td>
+            <td>{{allData[9].address.city}}</td> 
+            <td>{{allData[9].address.street}}</td> 
+            <td>{{allData[9].address.suite}}</td> 
+             <td>{{allData[9].address.zipcode}}</td> 
+            <td>{{allData[9].address.geo.lat}}</td> 
+            <td>{{allData[9].address.geo.lng}}</td>  
+        </tr>
+    </tbody>
+</table>
+

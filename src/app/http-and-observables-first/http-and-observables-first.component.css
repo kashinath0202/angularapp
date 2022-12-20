@@ -1,0 +1,15 @@
+td,th{
+    text-align: center;
+}
+
+th{
+    background-color: rgb(232, 192, 174);
+    font-size: 20px;
+}
+td{
+    background-color: beige;
+    font-style: italic;
+}
+table{
+    border: 2px solid black;
+}
