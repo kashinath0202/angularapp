@@ -1,0 +1,189 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-8 text-left rounded shadow py-2">
+            <h4>Reactive Form</h4>
+            <form [formGroup]="myReactiveForm" (ngSubmit)="onSubmitForm()">
+                <div formGroupName="userDetails">
+                    <div class="row">
+                        <div class="col">
+                            <label for="fName">First Name</label>
+                            <input class="form-control" type="text" id="fName" placeholder="Enter First Name"
+                                formControlName="FirstName">
+                            <span
+                                *ngIf="myReactiveForm.get('userDetails.FirstName').invalid && myReactiveForm.get('userDetails.FirstName').touched">Please
+                                enter first name </span>
+                        </div>
+                        <div class="col">
+                            <label for="mName">Middle Name</label>
+                            <input class="form-control" type="text" id="Mname" placeholder="Enter Middle Name"
+                                formControlName="MiddleName">
+                            <span
+                                *ngIf="myReactiveForm.get('userDetails.MiddleName').invalid && myReactiveForm.get('userDetails.MiddleName').touched">Please
+                                enter middle name</span>
+                        </div>
+                        <div class="col">
+                            <label for="lName">Last Name</label>
+                            <input class="form-control" type="text" id="lName" placeholder="Enter Last Name"
+                                formControlName="LastName">
+                            <span
+                                *ngIf="myReactiveForm.get('userDetails.LastName').invalid && myReactiveForm.get('userDetails.LastName').touched">Please
+                                enter last name</span>
+                        </div>
+                    </div>
+                </div>
+                <div formGroupName="userPersonalDetails">
+                    <div class="row">
+                        <div class="col">
+                            <label for="uName">UserName</label>
+                            <input class="form-control" type="text" id="uName" placeholder="EnterUsername"
+                                formControlName="UserName">
+                            <span
+                                *ngIf="myReactiveForm.get('userPersonalDetails.UserName').invalid && myReactiveForm.get('userPersonalDetails.UserName').touched">
+                                <span
+                                    *ngIf="myReactiveForm.get('userPersonalDetails.UserName').errors['required']">Please
+                                    enter Username</span>
+                                <span
+                                    *ngIf="myReactiveForm.get('userPersonalDetails.UserName').errors['pattern']">Please
+                                    enter valid username for-eg.abc@kashi.com</span>
+                            </span>
+
+                        </div>
+                        <div class="col">
+                            <label for="pass">Password</label>
+                            <input class="form-control" type="password" id="pass" placeholder="EnterPassword"
+                                formControlName="Password">
+                        </div>
+                        <div class="col">
+                            <label for="cPass">Confirm Password</label>
+                            <input class="form-control" type="password" id="cPass" placeholder="Enter Confirm Password"
+                                formControlName="ConfirmPassword">
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="emaiId">Email ID</label>
+                            <input class="form-control" type="email" id="emailId" placeholder="Enter Email ID"
+                                formControlName="EmailId">
+                            <span
+                                *ngIf="myReactiveForm.get('userPersonalDetails.EmailId').invalid && myReactiveForm.get('userPersonalDetails.EmailId').touched">
+                                <span
+                                    *ngIf="myReactiveForm.get('userPersonalDetails.EmailId').errors['required']">Please
+                                    enter email ID</span>
+                                <span *ngIf="myReactiveForm.get('userPersonalDetails.EmailId').errors['email']">Please
+                                    enter valid email Id for-eg.abc@gmail.com </span>
+                            </span>
+                        </div>
+                        <div class="col">
+                            <label for="moNumber">Mobile No</label>
+                            <input class="form-control" type="number" id="moNumber" placeholder="Enter Mobile Number"
+                                formControlName="MobileNumber">
+                            <span
+                                *ngIf="myReactiveForm.get('userPersonalDetails.MobileNumber').invalid && myReactiveForm.get('userPersonalDetails.MobileNumber').touched">
+                                <span
+                                    *ngIf="myReactiveForm.get('userPersonalDetails.MobileNumber').errors['required']">Please
+                                    enter mobile number</span>
+                                <span
+                                    *ngIf="myReactiveForm.get('userPersonalDetails.MobileNumber').errors['pattern']">Please
+                                    enter minimum 10 digits</span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="age">Age</label>
+                        <input class="form-control" type="number" id="age" placeholder="Enter your age"
+                            formControlName="age">
+                        <span *ngIf="myReactiveForm.get('age').invalid && myReactiveForm.get('age').touched">
+                        <span *ngIf="myReactiveForm.get('age').errors['required']">This field is required</span>
+                        <span *ngIf="myReactiveForm.get('age').errors['userAgeAllowed']"> The age should be in bet. 18 to 21 years old</span>
+                          </span>
+                    </div>
+                    <div class="col">
+                        <label for="dob">Date of birth</label>
+                        <input class="form-control" type="date" id="dob" placeholder="Select Date of Birth"
+                            formControlName="DateOfBirth">
+                    </div>
+                    <div class="col">
+                        <label for="qulify">Qualification</label>
+                        <input class="form-control" type="text" id="qulify" placeholder="Enter Qualification"
+                            formControlName="Qualification">
+                    </div>
+                    <!-- <div class="col" *ngFor="let gender of genders">
+                        <input type="radio" id="{{gender.id}}" value="{{gender.value}}"
+                            placeholder="Enter Qualification">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div> -->
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="roll">Developer Roll</label>
+                        <select class="form-control" name="DeveloperRoll" id="roll" formControlName="DeveloperRoll">
+                            <option id="roll" value="Front End Developer">Front End Developer</option>
+                            <option id="roll" value="Back End Developer">Back End Developer</option>
+                            <option id="roll" value="Full Stack Developer">Full Stack Developer</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                        <label for="state">State</label>
+                        <select class="form-control" name="state" id="dist" formControlName="State">
+                            <option value="" disabled>--Select--</option>
+                            <option name="state" id="dist">Maharashtra</option>
+                            <option name="state" id="dist">Karanataka</option>
+                            <option name="state" id="dist">Gujarat</option>
+                            <option name="state" id="dist">Keral</option>
+                            <option name="state" id="dist">Tamilnadu</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-7">
+                        <label for="address">Permanent Address</label>
+                        <input class="form-control" type="text" placeholder="Enter Permanent Address" id="address"
+                            formControlName="PermanentAddress">
+                        <span
+                            *ngIf="myReactiveForm.get('PermanentAddress').invalid && myReactiveForm.get('PermanentAddress').touched">Please
+                            enter address</span>
+                    </div>
+                    <div class="col">
+                        <label for="city">City</label>
+                        <input class="form-control" type="text" id="city" placeholder="Enter City Name"
+                            formControlName="City">
+                        <span *ngIf="myReactiveForm.get('City').invalid && myReactiveForm.get('City').touched">
+                            <span *ngIf="myReactiveForm.get('City').errors['required']">Please enter city name</span>
+                            <span
+                                *ngIf="myReactiveForm.get('City').errors['notAllowedCityNames']">{{myReactiveForm.get('City').value}}
+                                is city not allowed</span>
+                        </span>
+                    </div>
+                    <div class="col">
+                        <label for="pin">Pin Code</label>
+                        <input class="form-control" type="text" id="pin" placeholder="Enter pin Code"
+                            formControlName="PinCode">
+                        <span
+                            *ngIf="myReactiveForm.get('PinCode').invalid && myReactiveForm.get('PinCode').touched">Please
+                            enter pin code</span>
+                    </div>
+                </div>
+
+                <div formArrayName="skills">
+                    <label for="">Skills</label>
+                    <ng-container *ngFor="let skill of this.myReactiveForm.get('skills').controls; index as i">
+                        <input class="form-control" type="text" placeholder="Add Skills" formControlName="{{i}}">
+                    </ng-container>
+                    <button class="btn btn-success btn-sm mt-4 btn-add" type="button" (click)="onAddSkill()"><i>+</i>Add Skills</button>
+                    <BUtton class="btn btn-warning btn-sm mt-4 btn-add" type="button" (click)="onRemove()">Remove Skill</BUtton>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <button class="btn btn-success" type="submit">Submit</button>
+                    </div>
+                    <div class="col">
+                        <button class="btn btn-danger" type="reset">Clear</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
