@@ -1,0 +1,29 @@
+<p>http-and-observables-second works!</p>
+
+<h1 style="text-align: center; color: rgb(197, 29, 130);">Check for the data in consol</h1>
+
+
+<table class="table table-bordered table-dark">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>User ID</th>
+            <th>Title</th>
+            <th>Body</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let getData of allPostData">
+            <th>{{getData[0].id}}</th>
+            <th>{{getData[0].userId}}</th>
+            <th>{{getData[0].title}}</th>
+            <th>{{getData[0].body}}</th>
+        </tr>
+        <tr *ngFor="let getData of allPostData">
+            <th>{{getData[1].id}}</th>
+            <th>{{getData[1].userId}}</th>
+            <th>{{getData[1].title}}</th>
+            <th>{{getData[1].body}}</th>
+        </tr>
+    </tbody>
+</table>
