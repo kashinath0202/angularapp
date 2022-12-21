@@ -56,6 +56,14 @@ import { ServiceComponentTwoComponent } from './service-component-two/service-co
 import { DemoFirstService } from './servicess/demo-first.service';
 import { HttpAndObservableService } from './servicess/http-and-observable.service';
 import { HttpAndObservablesFirstComponent } from './http-and-observables-first/http-and-observables-first.component';
+import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
+import { HttpAndObservablesSecondComponent } from './http-and-observables-second/http-and-observables-second.component';
+import { SubjectAndBehaviorSubjectFirstComponent } from './subject-and-behavior-subject-first/subject-and-behavior-subject-first.component';
+import { SubjectAndBehaviorSubjectSecondComponent } from './subject-and-behavior-subject-second/subject-and-behavior-subject-second.component';
+import { SubjectAndBehaviorSubjectThirdComponent } from './subject-and-behavior-subject-third/subject-and-behavior-subject-third.component';
+import { SubjectAndBehaviorSubjectFourthComponent } from './subject-and-behavior-subject-fourth/subject-and-behavior-subject-fourth.component';
+import { SubjectAndBSubEmployeeFirstComponent } from './subject-and-bsub-employee-first/subject-and-bsub-employee-first.component';
+import { SubjectAndBSubEmployeeSecondComponent } from './subject-and-bsub-employee-second/subject-and-bsub-employee-second.component';
 
 
 
@@ -111,7 +119,15 @@ import { HttpAndObservablesFirstComponent } from './http-and-observables-first/h
   ReactiveFormMyComponent,
   ServiceComponentOneComponent,
   ServiceComponentTwoComponent,
-  HttpAndObservablesFirstComponent
+  HttpAndObservablesFirstComponent,
+  ReactiveFormComponent,
+  HttpAndObservablesSecondComponent,
+  SubjectAndBehaviorSubjectFirstComponent,
+  SubjectAndBehaviorSubjectSecondComponent,
+  SubjectAndBehaviorSubjectThirdComponent,
+  SubjectAndBehaviorSubjectFourthComponent,
+  SubjectAndBSubEmployeeFirstComponent,
+  SubjectAndBSubEmployeeSecondComponent
   ],
 
 
