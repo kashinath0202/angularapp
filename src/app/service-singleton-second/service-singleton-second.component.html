@@ -1,0 +1,28 @@
+<p>service-singleton-second works!</p>
+<p>service-singleton-first works!</p>
+
+<input type="text"  #number placeholder="Enter a number">
+<br><hr>
+
+<button class="btn btn-success" (click)="onClick(number.value)">Add Value</button>
+
+<br><hr>
+
+<button class="btn btn-warning"  (click)="removeValue()">Remove Value</button>
+
+<br><hr>
+
+<table class="table table-bordered">
+    <thead>
+        <tr>
+            <th>Sr.No</th>
+            <th>Numbers</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let num of numbers; let i=index">
+            <td>{{i+1}}</td>
+            <td>{{num}}</td>
+        </tr>
+    </tbody>
+</table>
