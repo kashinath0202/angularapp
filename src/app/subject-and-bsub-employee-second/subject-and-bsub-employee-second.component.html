@@ -1,0 +1,26 @@
+<body>
+    <h4>Component No - 02</h4>
+<table class="table table-bordered">
+    <thead>
+        <th>Sr.No</th>
+        <th>Laptop Name</th>
+        <th>Ram</th>
+        <th>External Memory</th>
+        <th>Camera</th>
+        <th>Price</th>
+    </thead>
+    <tbody>
+        <tr *ngFor='let mobile of mobileData'>
+            <td>{{mobile.srNo}}</td>
+            <td>{{mobile.mobileName}}</td>
+            <td>{{mobile.ram}}</td>
+            <td>{{mobile.externalMemory}}</td>
+            <td>{{mobile.camera}}</td>
+            <td>{{mobile.prise}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<button type="button" class="btn btn-success" (click)="onClick()">Update</button>
+
+</body>

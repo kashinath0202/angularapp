@@ -1,0 +1,25 @@
+button{
+    text-align: center;
+    margin-left: 550px;
+    margin-bottom: 10px;
+}
+table{
+    width: 800px;
+    margin-left: 250px;
+    background-color: rgb(201, 232, 232);
+    border: 2px solid black;
+}
+td{
+    font-style: italic;
+}
+body{
+    background-color: rgb(214, 230, 205);
+    border: 3px solid red;
+    margin-left: 30px;
+    margin-right: 30px;
+    margin-bottom: 20px;
+}
+h4{
+    margin-left: 500px;
+    color: rgb(165, 105, 26);
+}
