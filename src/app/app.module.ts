@@ -4,6 +4,14 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import{HttpClientModule} from '@angular/common/http'
 
 
+import { DemoFirstService } from './servicess/demo-first.service';
+import { HttpAndObservableService } from './servicess/http-and-observable.service';
+import { EmployeeDataService } from './servicess/employee-data.service';
+import { HttpAndObservableSecondService } from './servicess/http-and-observable-second.service';
+import { SubjectAndBehaviorSubjectService } from './servicess/subject-and-behavior-subject.service';
+import { SingletonService } from './servicess/singleton.service';
+
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
@@ -52,9 +60,6 @@ import { TemplateFormMyComponent } from './template-form-my/template-form-my.com
 import { ReactiveFormMyComponent } from './reactive-form-my/reactive-form-my.component';
 import { ServiceComponentOneComponent } from './service-component-one/service-component-one.component';
 import { ServiceComponentTwoComponent } from './service-component-two/service-component-two.component';
-
-import { DemoFirstService } from './servicess/demo-first.service';
-import { HttpAndObservableService } from './servicess/http-and-observable.service';
 import { HttpAndObservablesFirstComponent } from './http-and-observables-first/http-and-observables-first.component';
 import { ReactiveFormComponent } from './reactive-form/reactive-form.component';
 import { HttpAndObservablesSecondComponent } from './http-and-observables-second/http-and-observables-second.component';
@@ -64,6 +69,10 @@ import { SubjectAndBehaviorSubjectThirdComponent } from './subject-and-behavior-
 import { SubjectAndBehaviorSubjectFourthComponent } from './subject-and-behavior-subject-fourth/subject-and-behavior-subject-fourth.component';
 import { SubjectAndBSubEmployeeFirstComponent } from './subject-and-bsub-employee-first/subject-and-bsub-employee-first.component';
 import { SubjectAndBSubEmployeeSecondComponent } from './subject-and-bsub-employee-second/subject-and-bsub-employee-second.component';
+import { ServiceSingletonFirstComponent } from './service-singleton-first/service-singleton-first.component';
+import { ServiceSingletonSecondComponent } from './service-singleton-second/service-singleton-second.component';
+import { SubjectAndBSubEmployeeThirdComponent } from './subject-and-bsub-employee-third/subject-and-bsub-employee-third.component';
+import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 
 
 
@@ -127,7 +136,11 @@ import { SubjectAndBSubEmployeeSecondComponent } from './subject-and-bsub-employ
   SubjectAndBehaviorSubjectThirdComponent,
   SubjectAndBehaviorSubjectFourthComponent,
   SubjectAndBSubEmployeeFirstComponent,
-  SubjectAndBSubEmployeeSecondComponent
+  SubjectAndBSubEmployeeSecondComponent,
+  ServiceSingletonFirstComponent,
+  ServiceSingletonSecondComponent,
+  SubjectAndBSubEmployeeThirdComponent,
+  PipeDemoComponent,
   ],
 
 
@@ -143,7 +156,11 @@ import { SubjectAndBSubEmployeeSecondComponent } from './subject-and-bsub-employ
 
   providers: [
     DemoFirstService,
-    HttpAndObservableService
+    HttpAndObservableService,
+    EmployeeDataService,
+    HttpAndObservableSecondService,
+    SubjectAndBehaviorSubjectService,
+    SingletonService                        // Concept of Singleton Service same work different component (service is module level)
   ],
 
 
