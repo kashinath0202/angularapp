@@ -76,6 +76,8 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
 import { CountPipe } from './customPipes/count.pipe';
 import { FilterPipe } from './customPipes/filter.pipe';
 import { CustomFilterPipeComponent } from './custom-filter-pipe/custom-filter-pipe.component';
+import { CustomPipeAssignComponent } from './custom-pipe-assign/custom-pipe-assign.component';
+import { MaleFemaleAssignPipe } from './customPipes/male-female-assign.pipe';
 
 
 
@@ -147,6 +149,8 @@ import { CustomFilterPipeComponent } from './custom-filter-pipe/custom-filter-pi
   CountPipe,
   FilterPipe,
   CustomFilterPipeComponent,
+  CustomPipeAssignComponent,
+  MaleFemaleAssignPipe,
   ],
 
 
