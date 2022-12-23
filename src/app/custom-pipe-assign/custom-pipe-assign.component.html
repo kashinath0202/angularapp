@@ -1,0 +1,23 @@
+ 
+   <h2 style="text-align: center; color: darkorchid;">Using Custom Pipe by Gender</h2>
+ 
+<table class="table table-borderd table-warning">
+    <thead>
+        <tr>
+            <th>ID.No</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Gender</th>
+            <th>State</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of empData">
+            <td>{{data.EmpId}}</td>
+            <td>{{data.name | maleFemaleAssign:data.gender}}</td>
+            <td>{{data.age}}</td>
+            <td>{{data.gender}}</td>
+            <td>{{data.State}}</td>
+        </tr>
+    </tbody>
+</table>
