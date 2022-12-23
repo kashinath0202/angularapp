@@ -1,0 +1,90 @@
+
+                  <h2 style="text-align: center;">Angular Inbuilt  Pipes</h2>
+
+<table class="table table-bordered table-danger">
+    <thead>
+        <tr>
+            <th>Employee.ID (lowercase)</th>
+            <th>Employee.Name (UpperCase)</th>
+            <th>Employee.Salary (India)</th>
+            <th>Employee.Salary (USD)</th>
+            <th>Employee.Salary (Decimal)</th>
+            <th>Employee.DOB</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of employee">
+            <td>{{data.id | lowercase}}</td>
+            <td>{{data.name | uppercase}}</td>
+            <td>{{data.salary | currency:'INR'}}</td>
+            <td>{{data.salary | currency:'USD'}}</td>
+            <td>{{data.salary | number : '1.2-2'}}</td>
+            <td>{{data.dateOfBirth | date}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<h4>Date pipes</h4>
+
+<div style="color: rgb(144, 38, 180); background-color: rgb(223, 211, 195);">
+
+
+
+ <h5>01- By Default :-  {{dateOfBirth}}</h5>
+
+<h5>02- Medium :-  {{dateOfBirth | date:'medium'}}</h5>
+
+<h5>02- Specific Format (dd/MM/yyyy) :-  {{dateOfBirth | date:'dd/MM/yyyy'}}</h5>
+
+<h4>medium format: {{todayDate | date:'medium'}}</h4>
+<h4>long format: {{todayDate | date:'long'}}</h4>
+<h4>full format: {{todayDate | date:'full'}}</h4>
+<h4>shortDate format: {{todayDate | date:'shortDate'}}</h4>
+<h4>mediumDate format: {{todayDate | date:'mediumDate'}}</h4>
+<h4>longDate format: {{todayDate | date:'longDate'}}</h4>
+<h4>fullDate format: {{todayDate | date:'fullDate'}}</h4>
+
+</div>
+
+<h4>Time pipes</h4>
+
+<div style="color: rgb(175, 7, 231); background-color: rgb(195, 232, 116);">
+
+    
+   
+    <h5>01- By Default :-  {{dateOfBirth}}</h5>
+   
+   <h5>02- Medium Time:-  {{dateOfBirth | date:'mediumTime'}}</h5>
+   
+   <h5>02- Specific Format :-  {{dateOfBirth | date:timezone}}</h5>
+   <h4>shortTime format: {{todayDate | date:'shortTime'}}</h4>
+   <h4>mediumTime format: {{todayDate | date:'mediumTime'}}</h4>
+   <h4>longTime format: {{todayDate | date:'longTime'}}</h4>
+   <h4>fullTime format: {{todayDate | date:'fullTime'}}</h4>
+   </div>
+
+
+   <h2>Async Pipes</h2>
+      
+   <div style="background-color: darkgrey;">
+        <h4>Inbuilt Pipe using Async (do not using subscribe method)</h4>
+           <h3>I am from Service -  {{getData | async}}</h3>
+   </div>
+
+   <h2>Json Pipe</h2>
+
+   <div style="background-color: bisque;">
+    
+     
+     <li>{{employee | json}}</li>
+
+   </div>
+
+   <h2>Custom Pipes (Pipe Name Count (Count length))</h2>
+   <div style="background-color: darkkhaki;">
+        
+       <strong>Total Length (Sachin) :- {{name | count}}</strong>  <hr>
+     <strong>Total Length (9096949202) :- {{num | count}}</strong> <hr>
+       <strong>Total Length (I am UI Developer) :- {{greet | count}}</strong>  <hr>
+
+   </div>
