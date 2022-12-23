@@ -73,6 +73,9 @@ import { ServiceSingletonFirstComponent } from './service-singleton-first/servic
 import { ServiceSingletonSecondComponent } from './service-singleton-second/service-singleton-second.component';
 import { SubjectAndBSubEmployeeThirdComponent } from './subject-and-bsub-employee-third/subject-and-bsub-employee-third.component';
 import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
+import { CountPipe } from './customPipes/count.pipe';
+import { FilterPipe } from './customPipes/filter.pipe';
+import { CustomFilterPipeComponent } from './custom-filter-pipe/custom-filter-pipe.component';
 
 
 
@@ -141,6 +144,9 @@ import { PipeDemoComponent } from './pipe-demo/pipe-demo.component';
   ServiceSingletonSecondComponent,
   SubjectAndBSubEmployeeThirdComponent,
   PipeDemoComponent,
+  CountPipe,
+  FilterPipe,
+  CustomFilterPipeComponent,
   ],
 
 
