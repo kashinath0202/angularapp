@@ -78,6 +78,17 @@ import { FilterPipe } from './customPipes/filter.pipe';
 import { CustomFilterPipeComponent } from './custom-filter-pipe/custom-filter-pipe.component';
 import { CustomPipeAssignComponent } from './custom-pipe-assign/custom-pipe-assign.component';
 import { MaleFemaleAssignPipe } from './customPipes/male-female-assign.pipe';
+import { RouterOutletComponent } from './router-outlet/router-outlet.component';
+import { RouterLogInComponent } from './router-log-in/router-log-in.component';
+import { RouterAboutUsComponent } from './router-about-us/router-about-us.component';
+import { RouterContactUsComponent } from './router-contact-us/router-contact-us.component';
+import { RouterHomeComponent } from './router-home/router-home.component';
+import { RouterPageNotFoundComponent } from './router-page-not-found/router-page-not-found.component';
+import { RouterProductComponent } from './router-product/router-product.component';
+import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
+import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
+import { AudiComponent } from './router-product/audi/audi.component';
+import { FortunerComponent } from './router-product/fortuner/fortuner.component';
 
 
 
@@ -151,6 +162,17 @@ import { MaleFemaleAssignPipe } from './customPipes/male-female-assign.pipe';
   CustomFilterPipeComponent,
   CustomPipeAssignComponent,
   MaleFemaleAssignPipe,
+  RouterOutletComponent,
+  RouterLogInComponent,
+  RouterAboutUsComponent,
+  RouterContactUsComponent,
+  RouterHomeComponent,
+  RouterPageNotFoundComponent,
+  RouterProductComponent,
+  RollsRoyceComponent,
+  RangeRoverComponent,
+  AudiComponent,
+  FortunerComponent,
   ],
 
 
