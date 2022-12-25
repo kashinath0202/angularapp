@@ -18,7 +18,9 @@ export class DecoratorChildComponent implements OnInit {
 
   @Output() dataEvent:EventEmitter<string> = new EventEmitter<string>();
   
-  constructor() { }
+  constructor() { 
+    
+  }
 
   ngOnInit() {
 
@@ -27,6 +29,9 @@ export class DecoratorChildComponent implements OnInit {
      console.log('I am Parent Component',this.greet);
      
   }
+
+
+  
 
     // @Output Example
 
