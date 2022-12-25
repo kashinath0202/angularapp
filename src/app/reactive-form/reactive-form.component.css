@@ -1,0 +1,11 @@
+input,button,select{
+    margin: 10px;
+}
+input.ng-invalid.ng-touched{
+    border-color: rgb(69, 14, 26);
+    box-shadow:0px 0px 3px inset red ;
+}
+span{
+    color: red;
+    font-style: italic;
+}

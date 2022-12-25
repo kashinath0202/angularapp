@@ -1,0 +1,80 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-left rounded shadow py-2">
+            <form [formGroup]="projectForm" (ngSubmit)="onSubmit()">
+
+                    <div formGroupName="userDetail">
+                       <div class="row">
+                            <div class="col">
+                                <label for="fName">First Name</label>
+                                <input class="form-control" type="text" id="fName" placeholder="Enter first name"
+                                    formControlName="firstName">
+                                    <span *ngIf="projectForm.get('userDetail.firstName').invalid && projectForm.get('userDetail.firstName').touched">
+                                        <span *ngIf="projectForm.get('userDetail.firstName').errors['required']"> Please enter first name</span>
+                                    </span>
+                            </div>
+                            <div class="col">
+                                <label for="lName">Last Name</label>
+                                <input class="form-control" type="text" id="lName" placeholder="Enter last name"
+                                    formControlName="lastName">
+                                    <span *ngIf="projectForm.get('userDetail.lastName').invalid && projectForm.get('userDetail.lastName').touched">
+                                        <span *ngIf="projectForm.get('userDetail.lastName').errors['required']"> Please enter Last name</span>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>
+
+        <div class="row">
+             <div class="col">
+                 <div class="gender" *ngFor="let gender of genders">
+                     <input type="radio" formControlName="Gender" id="{{gender.id}}" value="{{gender.value}}">
+                     <label for="{{gender.id}}">{{gender.value}}</label>
+                     </div>
+                 </div> 
+            <div class="col">
+                <label for="dob">Date of Birth</label>
+                <input class="for=control" type="date" id="dob" formControlName="dateOfBirth">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <label for="email">Email ID</label>
+                <input class="form-control" type="text"  id="email" placeholder="Enter email id"
+                    formControlName="emailID">
+                    <span *ngIf="projectForm.get('emailID').invalid && projectForm.get('emailID').touched">
+                        <span *ngIf="projectForm.get('emailID').errors['email']"> Please enter valid email ID</span>
+                    </span>
+            </div>
+            <div class="col">
+                <label for="pName">Project Name</label>
+                <input class="form-control" type="text" id="pName" placeholder="Enter project name"
+                    formControlName="projectName">
+                    <span *ngIf="projectForm.get('projectName').invalid && projectForm.get('projectName').touched">hii
+                        <span *ngIf="projectForm.get('projectName').errors['notAllow']">{{projectForm.get('projectName').value}} is Project name not allowed</span>
+                    </span>
+            </div>
+        </div>
+
+        <div>
+            <label for="Pstatus">Project Status</label>
+            <select class="form-control" name="" id="pStatus" formControlName="projectStatus">
+                <option disabled>--Select--</option>
+                <option value="Stable">Stable</option>
+                <option value="Critical">Critical</option>
+                <option value="Finished">Finished</option>
+            </select>
+        </div>
+
+        <div class="row">
+            <div class="col">
+                <button class="btn btn-success">Submit</button>
+            </div>
+            <div class="col">
+                <button class="btn btn-warning" type="reset">Clear</button>
+            </div>
+        </div>
+        </form>
+    </div>
+</div>
+</div>
