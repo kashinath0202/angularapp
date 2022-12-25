@@ -1,0 +1,16 @@
+.page-area{
+    width: 80%;
+    margin: 0 auto;
+    padding: 15px;
+    min-height: 400px;
+    text-align: left;
+   background: rgb(220, 216, 211);
+}
+.card{
+    display: inline-block;
+    margin: 0 10px 10px;
+    width: 22.5%;
+}
+img[src]{
+    height: 170px;
+}
