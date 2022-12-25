@@ -15,7 +15,7 @@ export class AddRemoveAssignComponent implements OnInit {
      
   }
 
-  data:any[]=[]
+  data=[]
 
   addData(values){
       this.data.push({mobileName:values})
