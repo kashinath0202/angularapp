@@ -42,7 +42,7 @@ AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked , OnDe
   ngAfterContentChecked(): void {
     // Called By 6th Number & every time when change Detection 
     console.log('ngAfterContentChecked Called');
-    this.contentParentData.nativeElement.setAttribute('style',`color:${this.parentData}`);  // Dynamically Color Set
+    // this.contentParentData.nativeElement.setAttribute('style',`color:${this.parentData}`);  // Dynamically Color Set
   }
   
   ngAfterContentInit(): void {
@@ -61,11 +61,11 @@ AfterContentInit , AfterContentChecked , AfterViewInit , AfterViewChecked , OnDe
     // Called By 3rd Number
     console.log('ngOnInit Called');
 
-    this.counter=setInterval(()=>{     // Using This ngDestroy hook
-      this.num= this.num + 1;
-      console.log(this.num);
+    // this.counter=setInterval(()=>{     // Using This ngDestroy hook
+    //   this.num= this.num + 1;
+    //   console.log(this.num);
       
-    },2000)
+    // },2000)
   }
 
   ngOnChanges(changes: SimpleChanges): void {
