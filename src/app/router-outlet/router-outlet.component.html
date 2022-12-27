@@ -1,15 +1,20 @@
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+</head>
   
   
-  <nav class="nav nav-tabs text-bg-secondary p-1">
-        <!-- <li class="nav-item"><a class="nav-link color" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" routerLink="logIn">Log In</a></li> -->
-       <li class="nav-item"> <a class="nav-link color" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" routerLink="home">Home</a></li>
-        <li class="nav-item"><a class="nav-link color" routerLinkActive="active" routerLink="aboutUs">About Us</a></li>   
+  <nav class="nav nav-tabs p-1 backColor">
+        <!-- <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" routerLink="logIn">Log In</a></li> -->
+       <li class="nav-item"> <a class="nav-link" routerLinkActive="active" routerLinkActiveOptions="{exact:true}" routerLink="home">Home</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="aboutUs">About Us</a></li>   
            <!-- Router link use two way (without [] & without)  -->
-        <li class="nav-item"><a class="nav-link color" routerLinkActive="active" [routerLink]="['/contactUs']">Contact Us</a></li>
-        <li class="nav-item"><a class="nav-link color" routerLinkActive="active" [routerLink]="['/cars']">Cars</a></li>
-        <li class="nav-item"><a class="nav-link color" routerLinkActive="active" routerLink="404notfound">Information</a></li>
-        <li class="nav-item"><a class="nav-link disabled color"   routerLink="other">Other</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" [routerLink]="['/contactUs']">Contact Us</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" [routerLink]="['/cars']">Cars</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="posts">Posts</a></li>
+        <li class="nav-item"><a class="nav-link" routerLinkActive="active" routerLink="404notfound">Information</a></li>
+        <input type="search" placeholder="Search..." >
   </nav>
   
     <router-outlet></router-outlet>

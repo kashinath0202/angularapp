@@ -1,10 +1,17 @@
-/* .color{
-    color: bisque;
-} */
-
-.back{
-    background-color: rgb(163, 138, 87);
-}
 a{
+    color: rgb(231, 229, 226);
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+a:hover{
+    color: brown;
+}
+
+.backColor{
+   background-color: #2874f0;
+}
+
+input{
+          border-radius: 10px;
+          height: 32px;
+          margin-left: 500px;
 }
