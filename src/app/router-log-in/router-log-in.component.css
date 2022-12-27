@@ -151,3 +151,8 @@ a{color:inherit;text-decoration:none}
 	text-align:center;
     color: #1161ee;
 }
+
+.row{
+	color: red;
+	font-style: italic;
+}

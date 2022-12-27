@@ -1,3 +1,6 @@
+<div class="row text-center">
+<p *ngIf="msgWrong">The password that you've entered is incorrect. Forgotten password?</p>
+</div>
 <div class="login-wrap">
 	<div class="login-html">
 		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
@@ -5,23 +8,23 @@
 		<div class="login-form">
 			<div class="sign-in-htm">
 				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+					<label for="user"  class="label">Username</label>
+					<input id="user" #uname type="text" class="input">
 				</div>
 				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
+					<label for="pass"  class="label">Password</label>
+					<input id="pass" #psd type="password" class="input" data-type="password">
 				</div>
 				<div class="group">
 					<input id="check" type="checkbox" class="check" checked>
 					<label for="check"><span class="icon"></span> Keep me Signed in</label>
 				</div>
 				<div class="group">
-					<input type="submit" class="button" value="Sign In">
+					<button type="submit" (click)="checkValidation(uname.value,psd.value)" class="button">Sign In</button>
 				</div>
 				<div class="hr"></div>
 				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
+					<a routerLink="#forgot" >Forgot Password?</a>
 				</div>
 			</div>
 			<div class="sign-up-htm">
@@ -51,3 +54,4 @@
 		</div>
 	</div>
 </div>
+
