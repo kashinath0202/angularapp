@@ -89,6 +89,8 @@ import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.co
 import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
 import { AudiComponent } from './router-product/audi/audi.component';
 import { FortunerComponent } from './router-product/fortuner/fortuner.component';
+import { RouterParameterizeDemoComponent } from './router-parameterize-demo/router-parameterize-demo.component';
+import { RouterParaPostDetailsComponent } from './router-para-post-details/router-para-post-details.component';
 
 
 
@@ -173,6 +175,8 @@ import { FortunerComponent } from './router-product/fortuner/fortuner.component'
   RangeRoverComponent,
   AudiComponent,
   FortunerComponent,
+  RouterParameterizeDemoComponent,
+  RouterParaPostDetailsComponent,
   ],
 
 
