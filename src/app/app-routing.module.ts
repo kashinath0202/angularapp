@@ -21,14 +21,14 @@ const routes: Routes = [
   {path:'home', component:RouterHomeComponent},
   {path:'aboutUs', component:RouterAboutUsComponent},
   {path:'contactUs', component:RouterContactUsComponent},
-  {path:'cars',                                                          //localhost:4200/cars
-                children:[
-                  {path:'',component:RouterProductComponent},           //localhost:4200/cars
-                  {path:'rollsRoyce',component:RollsRoyceComponent},     //localhost:4200/cars/rollsRoyce
-                  {path:'rangeRove',component:RangeRoverComponent},     //localhost:4200/cars/rangeRove
-                  {path:'audi',component:AudiComponent},                //localhost:4200/cars/audi
-                  {path:'fortuner',component:FortunerComponent}         //localhost:4200/cars/fortuner
-                ]},
+  // {path:'cars',                // Move to Feature Module                                  //localhost:4200/cars
+  //               children:[
+  //                 {path:'',component:RouterProductComponent},           //localhost:4200/cars
+  //                 {path:'rollsRoyce',component:RollsRoyceComponent},     //localhost:4200/cars/rollsRoyce
+  //                 {path:'rangeRove',component:RangeRoverComponent},     //localhost:4200/cars/rangeRove
+  //                 {path:'audi',component:AudiComponent},                //localhost:4200/cars/audi
+  //                 {path:'fortuner',component:FortunerComponent}         //localhost:4200/cars/fortuner
+  //               ]},
   {path:'posts',component:RouterParameterizeDemoComponent},             //localhost:4200/posts    
   {path:'postDetails/:id',component:RouterParaPostDetailsComponent}, 
    {path:'**', component:RouterPageNotFoundComponent}                    //wild card route  It should be last component
