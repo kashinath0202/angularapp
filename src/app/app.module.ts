@@ -84,14 +84,20 @@ import { RouterAboutUsComponent } from './router-about-us/router-about-us.compon
 import { RouterContactUsComponent } from './router-contact-us/router-contact-us.component';
 import { RouterHomeComponent } from './router-home/router-home.component';
 import { RouterPageNotFoundComponent } from './router-page-not-found/router-page-not-found.component';
-import { RouterProductComponent } from './router-product/router-product.component';
-import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
-import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
-import { AudiComponent } from './router-product/audi/audi.component';
-import { FortunerComponent } from './router-product/fortuner/fortuner.component';
+ import { RouterProductComponent } from './router-product/router-product.component';
+ import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
+ import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
+ import { AudiComponent } from './router-product/audi/audi.component';
+ import { FortunerComponent } from './router-product/fortuner/fortuner.component';
 import { RouterParameterizeDemoComponent } from './router-parameterize-demo/router-parameterize-demo.component';
 import { RouterParaPostDetailsComponent } from './router-para-post-details/router-para-post-details.component';
-
+import { ProductModule } from './router-product/product.module';
+import { RouterElectronicsProductsComponent } from './router-electronics-products/router-electronics-products.component';
+import { TvComponent } from './router-electronics-products/tv/tv.component';
+import { CoolerComponent } from './router-electronics-products/cooler/cooler.component';
+import { AcComponent } from './router-electronics-products/ac/ac.component';
+import { RefrigeratorsComponent } from './router-electronics-products/refrigerators/refrigerators.component';
+import { FeatureElectricalModule } from './router-electronics-products/feature-electrical.module';
 
 
 
@@ -113,7 +119,7 @@ import { RouterParaPostDetailsComponent } from './router-para-post-details/route
   StructuralDirectiveComponent,
   AttributeDirectiveComponent,
 
-  CustomDireDirective,
+  // CustomDireDirective,           // it is modified the into sheared module & we can use easily multipale components
   
   BindingPracticeComponent,
   DecoratorParentComponent,
@@ -170,23 +176,30 @@ import { RouterParaPostDetailsComponent } from './router-para-post-details/route
   RouterContactUsComponent,
   RouterHomeComponent,
   RouterPageNotFoundComponent,
-  RouterProductComponent,
-  RollsRoyceComponent,
-  RangeRoverComponent,
-  AudiComponent,
-  FortunerComponent,
+  // RouterProductComponent,
+  // RollsRoyceComponent,
+  // RangeRoverComponent,      // Created Separate Feature Module
+  // AudiComponent,
+  // FortunerComponent,
   RouterParameterizeDemoComponent,
   RouterParaPostDetailsComponent,
+  RouterElectronicsProductsComponent,
+  // TvComponent,
+  // CoolerComponent,            // Created Separate Feature Module
+  // AcComponent,
+  // RefrigeratorsComponent,
   ],
 
 
 
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    ProductModule,            // Feature Module & it is inserted as before AppRoutingModule,(concept of prirority)
+    FeatureElectricalModule,  // Feature Module 2 & it is inserted as before AppRoutingModule,(concept of prirority)
+    AppRoutingModule,   
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule                 // HttpClientModule 
+    HttpClientModule        // HttpClientModule 
   ],
 
 
