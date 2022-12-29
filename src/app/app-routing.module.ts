@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
+import { AboutModule } from './router-about-us/about.module';
 
 import { RouterAboutUsComponent } from './router-about-us/router-about-us.component';
 import { RouterContactUsComponent } from './router-contact-us/router-contact-us.component';
@@ -13,13 +14,15 @@ import { FortunerComponent } from './router-product/fortuner/fortuner.component'
 import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
 import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
 import { RouterProductComponent } from './router-product/router-product.component';
+import { ServiceModule } from './routerLoading/service.module';
+import { ServiceComponent } from './routerLoading/service/service.component';
 
 
 const routes: Routes = [
   {path:'', redirectTo:'logIn', pathMatch:'full'},        // it should be first component
   {path:'logIn', component:RouterLogInComponent},
-  {path:'home', component:RouterHomeComponent},
-  {path:'aboutUs', component:RouterAboutUsComponent},
+  {path:'home', loadChildren:'./router-home/home.module#HomeModule'},          // Using Lazy Loading
+  {path:'aboutUs',loadChildren:'./router-about-us/about.module#AboutModule'},  // Using Lazy Loading
   {path:'contactUs', component:RouterContactUsComponent},
   // {path:'cars',                // Move to Feature Module                                  //localhost:4200/cars
   //               children:[
@@ -29,13 +32,25 @@ const routes: Routes = [
   //                 {path:'audi',component:AudiComponent},                //localhost:4200/cars/audi
   //                 {path:'fortuner',component:FortunerComponent}         //localhost:4200/cars/fortuner
   //               ]},
+
+  // path & loadChildren Property & fileName & module.name & # % ModuleName
+  {path:'cars',loadChildren:'./router-product/product.module#ProductModule'},  // Using Lazy Loading
   {path:'posts',component:RouterParameterizeDemoComponent},             //localhost:4200/posts    
-  {path:'postDetails/:id',component:RouterParaPostDetailsComponent}, 
+  {path:'postDetails/:id',component:RouterParaPostDetailsComponent},
+  {path:'service',loadChildren:'./routerLoading/service.module#ServiceModule'}, // Using Lazy Loading
    {path:'**', component:RouterPageNotFoundComponent}                    //wild card route  It should be last component
 ];
 
-@NgModule({
-  imports: [RouterModule.forRoot(routes)],
+@NgModule({                          //,{preloadingStrategy:PreloadAllModules}      
+  imports: [RouterModule.forRoot(routes), // use PreLoading Syntax of ,{preloadingStrategy:PreloadAllModules}
+            //  AboutModule,
+            //  ServiceModule   // Because of use lazy loading
+   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {
+  constructor(){
+    console.log('Router Module call');
+    
+  }
+ }
