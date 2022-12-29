@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouterContactUsComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // console.log("ContactUs Page Called");
+    
+  } 
 
   ngOnInit() {
   }
