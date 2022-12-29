@@ -7,7 +7,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class RouterHomeComponent implements OnInit {
 
-  constructor() { }
+  constructor() { 
+    // console.log('home call');
+    
+  }
 
   ngOnInit() {
   }
