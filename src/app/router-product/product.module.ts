@@ -11,9 +11,8 @@ import { CustomDireDirective } from '../custom-dire.directive';
 
 
 const allProducts :Routes = [
-  {path:'cars',                                             //localhost:4200/cars
+  {path:'',component:RouterProductComponent,       //localhost:4200/cars
               children:[
-                {path:'',component:RouterProductComponent},           //localhost:4200/cars
                 {path:'rollsRoyce',component:RollsRoyceComponent},     //localhost:4200/cars/rollsRoyce
                 {path:'rangeRove',component:RangeRoverComponent},     //localhost:4200/cars/rangeRove
                 {path:'audi',component:AudiComponent},                //localhost:4200/cars/audi
@@ -37,4 +36,9 @@ const allProducts :Routes = [
 
    exports:[RouterModule]
 })
-export class ProductModule { }
+export class ProductModule {
+  constructor(){
+    console.log('Product (car tab) module call');
+    
+  }
+ }
