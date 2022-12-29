@@ -36,4 +36,9 @@ const electrical : Routes = [
     RouterModule
   ]
 })
-export class FeatureElectricalModule { }
+export class FeatureElectricalModule {
+  constructor(){
+    console.log('Feature electrical(product Module) Module call');
+    
+  }
+ }
