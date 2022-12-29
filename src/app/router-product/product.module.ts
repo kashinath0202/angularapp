@@ -38,7 +38,7 @@ const allProducts :Routes = [
 })
 export class ProductModule {
   constructor(){
-    console.log('Product (car tab) module call');
+    console.log('Product (car tab) module call & it is Preloading');
     
   }
  }

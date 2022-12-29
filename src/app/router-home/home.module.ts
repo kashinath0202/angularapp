@@ -21,7 +21,7 @@ const routes : Routes = [
 })
 export class HomeModule {
   constructor(){
-    console.log('Home Module Call');
+    console.log('Home Module Call & it is Preloading');
     
   }
  }
