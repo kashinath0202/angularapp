@@ -27,7 +27,7 @@ const info : Routes = [
 })
 export class AboutModule {
   constructor(){
-    console.log('About US Module call');
+    console.log('About US Module call & lazy loading');
     
   }
  }

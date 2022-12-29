@@ -14,7 +14,7 @@ import { ServiceRouterModule } from './service-router.module';
 })
 export class ServiceModule {
   constructor(){
-    console.log('Service module called');
+    console.log('Service module called & lazy loading');
     
   }
  }
