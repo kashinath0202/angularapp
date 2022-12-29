@@ -119,7 +119,7 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
   StructuralDirectiveComponent,
   AttributeDirectiveComponent,
 
-  // CustomDireDirective,           // it is modified the into sheared module & we can use easily multipale components
+  // CustomDireDirective,           // it is modified the into sheared module & we can use easily multiple components
   
   BindingPracticeComponent,
   DecoratorParentComponent,
@@ -172,9 +172,9 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
   MaleFemaleAssignPipe,
   RouterOutletComponent,
   RouterLogInComponent,
-  RouterAboutUsComponent,
-  RouterContactUsComponent,
-  RouterHomeComponent,
+ // RouterAboutUsComponent,     // Created Separate Feature Module & lazy loading 
+  RouterContactUsComponent,    
+  // RouterHomeComponent,        // Created Separate Feature Module & lazy loading 
   RouterPageNotFoundComponent,
   // RouterProductComponent,
   // RollsRoyceComponent,
@@ -194,8 +194,8 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
 
   imports: [
     BrowserModule,
-    ProductModule,            // Feature Module & it is inserted as before AppRoutingModule,(concept of prirority)
-    FeatureElectricalModule,  // Feature Module 2 & it is inserted as before AppRoutingModule,(concept of prirority)
+    // ProductModule,   // Using Lazy Loading & PreLoading     // Feature Module & it is inserted as before AppRoutingModule,(concept of prirority)
+    FeatureElectricalModule,  // Feature Module 2 & it is inserted as before AppRoutingModule,(concept of priority)
     AppRoutingModule,   
     FormsModule,
     ReactiveFormsModule,
@@ -217,4 +217,9 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
   bootstrap: [AppComponent]
 })
 
-export class AppModule { }
+export class AppModule {
+  constructor(){
+    console.log('App Module Call');
+    
+  }
+ }
