@@ -98,6 +98,11 @@ import { CoolerComponent } from './router-electronics-products/cooler/cooler.com
 import { AcComponent } from './router-electronics-products/ac/ac.component';
 import { RefrigeratorsComponent } from './router-electronics-products/refrigerators/refrigerators.component';
 import { FeatureElectricalModule } from './router-electronics-products/feature-electrical.module';
+import { RouteGuardOneComponent } from './route-guard-one/route-guard-one.component';
+import { RouteGuardThreeComponent } from './route-guard-three/route-guard-three.component';
+import { RouteGuardFiveComponent } from './route-guard-five/route-guard-five.component';
+import { RouteGuardFourComponent } from './route-guard-four/route-guard-four.component';
+import { RouterRegistrationFormComponent } from './router-registration-form/router-registration-form.component';
 
 
 
@@ -184,6 +189,11 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
   RouterParameterizeDemoComponent,
   RouterParaPostDetailsComponent,
   RouterElectronicsProductsComponent,
+  RouteGuardOneComponent,
+  RouteGuardThreeComponent,
+  RouteGuardFourComponent,
+  RouteGuardFiveComponent,
+  RouterRegistrationFormComponent,
   // TvComponent,
   // CoolerComponent,            // Created Separate Feature Module
   // AcComponent,
@@ -194,12 +204,13 @@ import { FeatureElectricalModule } from './router-electronics-products/feature-e
 
   imports: [
     BrowserModule,
-    // ProductModule,   // Using Lazy Loading & PreLoading     // Feature Module & it is inserted as before AppRoutingModule,(concept of prirority)
+     ProductModule,   // Using Lazy Loading & PreLoading     // Feature Module & it is inserted as before AppRoutingModule,(concept of prirority)
     FeatureElectricalModule,  // Feature Module 2 & it is inserted as before AppRoutingModule,(concept of priority)
     AppRoutingModule,   
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule        // HttpClientModule 
+    HttpClientModule,       // HttpClientModule 
+           
   ],
 
 
