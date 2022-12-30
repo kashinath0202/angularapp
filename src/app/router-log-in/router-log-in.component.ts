@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ActiveSecondService } from '../servicess/active-second.service';
 
 @Component({
   selector: 'app-router-log-in',
@@ -8,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class RouterLogInComponent implements OnInit {
        
-  constructor(private _route : Router){
+  constructor(private _route : Router,private _canActiveSecond : ActiveSecondService){
   }
  
     ngOnInit() {
@@ -17,15 +18,27 @@ export class RouterLogInComponent implements OnInit {
 
     msgWrong:boolean=false  
 
-
           checkValidation(uname,password){
-              if(uname=='kashi' && password== 'kashi'){
-                alert('You logIn Successful!')
-                 this._route.navigate(['/cars'])
-              }else
-                  {
-                    this.msgWrong=true
-                    alert('The username or password  entered is incorrect.')
-                  }
+        
+         var result = this._canActiveSecond.checkUsernameAndPassword(uname,password)    // service DI
+        
+         if(result == true){
+          alert('You logIn Successful!')
+          this._route.navigate(['/aboutUs'])
+         }else{
+                 this.msgWrong=true
+             alert('The username or password  entered is incorrect.')
+             return false
+         }
+
+
+              // if(uname=='kashi' && password== 'kashi'){
+              //   alert('You logIn Successful!')
+              //    this._route.navigate(['/cars'])
+              // }else
+              //     {
+              //       this.msgWrong=true
+              //       alert('The username or password  entered is incorrect.')
+              //     }
           }
 }
