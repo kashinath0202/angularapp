@@ -1,0 +1,79 @@
+<div class="conatainer">
+    <div class="row justify-content-center">
+        <div class="col-md-4 text-left rounded shadow ">
+
+            <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+                <h2>Reactive Form</h2>                                         
+
+                <div class="col-md-7 py-2">
+                    <label for="">Username</label>
+                    <input class="form-control" type="text" formControlName="userName"
+                        placeholder="Enter your username">
+                          <small *ngIf="!reactiveForm.get('userName').valid && reactiveForm.get('userName').touched">
+                            <span *ngIf="reactiveForm.get('userName').errors['required']"> Please enter valid Username</span>
+                             <span *ngIf="reactiveForm.get('userName').errors['namesNotAllowed']">{{reactiveForm.get('userName').value}} - is not allowed</span>
+                          </small>
+                </div>
+                <div class="form-group py-2">
+                    <input type="text" class="form-control" name="" id="" formControlName="email"
+                        placeholder="Enter email">
+                         <small class="text-danger" *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched"> 
+                        <small *ngIf="reactiveForm.get('email').errors['emailNotAllowed']">Email not allowed {{reactiveForm.get('email').value}}</small>
+                        Please enter valid email
+                    </small>
+                    </div>
+                <!-- <div class="col-md-7 py-2">
+                    
+                    <label >Email ID</label>
+                    <input  class="form-control" type="email" formControlName="email" placeholder="Enter your email ID">
+                <small *ngIf="!reactiveForm.get('email').valid && reactiveForm.get('email').touched">
+               <span *ngIf="reactiveForm.get('email').errors['required']">Please enter valid email ID</span> 
+                <span *ngIf="reactiveForm.get('email').errors['emailNotAllowed']">{{reactiveForm.get('email').value}} - is email ID not allowed</span>
+                </small>
+               
+            </div>         -->
+                <div class="col-md-7">
+                    <label for="allCourse">Course</label>
+                    <select class="form-control" id="allCourse" formControlName="course">
+                        <option disabled>--Select--</option>
+                        <option value="Angular">Angular</option>
+                        <option value="HTML5">HTML5</option>
+                        <option value="Java">Java</option>
+                    </select>
+                </div>
+                <div class="col-md-7 py-3">
+                    <div class="gender" *ngFor="let gender of genders">
+                        <input type="radio" formControlName="Gender" id="{{gender.id}}" value="{{gender.value}}">
+                        <label for="{{gender.id}}">{{gender.value}}</label>
+                    </div>
+                </div>
+
+                <div formGroupName="addressDetails">
+                    <div class="col-md-7 py-2">
+                        <label for="">Parament Address</label>
+                        <input class="form-control" type="text" formControlName="paramentAddress"
+                            placeholder="Enter your Parament Address">
+                    </div>
+                    <div class="col-md-7 py-2">
+                        <label for="">Pin Code</label>
+                        <input id="pass" class="form-control" type="number" formControlName="pinCode"
+                            placeholder="Enter your pin code">
+                    </div>
+                    <span
+                        *ngIf="!reactiveForm.get('addressDetails').valid && reactiveForm.get('addressDetails').touched">
+                        Please filling complete Address
+                    </span>
+
+                </div>
+                <div class="button py-2">
+                    <button class="btn btn-success " >Submit</button>
+                </div>
+
+            </form>           
+        </div>
+    </div>
+</div>
+
+
+
+<!-- [disabled]="!reactiveForm.valid" -->
