@@ -1,0 +1,17 @@
+.font{
+    font-size: 22px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+h5{
+    color: rgb(201, 125, 32);
+}
+h6{
+    font-style: italic;
+}
+ul{
+    display: inline-block;
+}
+.wid{
+    background-color: rgb(185, 182, 178);
+}
