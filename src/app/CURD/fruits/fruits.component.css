@@ -1,0 +1,28 @@
+img{
+    height: 100px;
+    width: 100px;
+}
+td{
+    font-size: 22px;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    /* padding-top: 40px; */
+}
+th{
+    font-weight: 800;
+    font-size: x-large;
+}
+ul,li{
+    display: inline-block;
+    padding: 10px;
+}
+.card{
+    width: 320px;
+    height: 350px;
+}
+.head{
+    font-size: 20px;
+}
+.bg{
+    background-color: rgb(158, 129, 101);
+}

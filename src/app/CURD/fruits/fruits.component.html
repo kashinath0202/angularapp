@@ -1,0 +1,47 @@
+
+<input type="text" #fruitName>
+<button (click)="getFruits(fruitName.value)">Get Fruits</button>
+
+<table class="table table-bordered table-danger text-center">
+    <thead>
+            <tr>
+                <th>Sr.No</th>
+                <th>Food ID</th>
+                <th>Label</th>
+                <th>Category Label</th>
+                <th>Category</th>
+                <!-- <th colspan="5">Nutrients</th> -->
+                <th>Image</th>
+            </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fruits of fruitData; let i= index">
+            <td>{{i+1}}</td>
+            <td>{{fruits.food.foodId}}</td>
+            <td>{{fruits.food.label}}</td>
+            <td>{{fruits.food.categoryLabel}}</td>
+            <td>{{fruits.food.category}}</td>
+            <td><img src="{{fruits.food.image}}" alt=""> </td>
+        </tr>
+    </tbody>
+</table>
+
+
+
+<ul *ngFor="let fruits of fruitData; let i= index">
+    <!-- <P>{{i+1}}</P>
+    <P>{{fruits.food.foodId}}</P>
+    <li>{{fruits.food.label}}</li>
+    <li>{{fruits.food.categoryLabel}}</li>
+    <li><img src="{{fruits.food.image}}" alt=""></li> -->
+
+
+<div class="card text-white bg mb-3" style="max-width: 18rem;">
+    <div class="card-header text-center head">{{i+1}}</div>
+    <div class="card-body">
+      <h5 class="card-title text-center">Label : {{fruits.food.label}}</h5>
+      <p class="card-text text-center">Food Id : {{fruits.food.foodId}}</p>
+      <p class="card-text text-center"><img src="{{fruits.food.image}}" alt="img"></p>
+    </div>
+  </div>
+</ul>
