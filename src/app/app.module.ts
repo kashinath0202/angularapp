@@ -28,7 +28,6 @@ import { NgForDirectiveComponent } from './ng-for-directive/ng-for-directive.com
 import { NgSwitchDirectiveComponent } from './ng-switch-directive/ng-switch-directive.component';
 import { StructuralDirectiveComponent } from './structural-directive/structural-directive.component';
 import { AttributeDirectiveComponent } from './attribute-directive/attribute-directive.component';
-import { CustomDireDirective } from './custom-dire.directive';
 import { BindingPracticeComponent } from './binding-practice/binding-practice.component';
 import { DecoratorParentComponent } from './decorator-parent/decorator-parent.component';
 import { DecoratorChildComponent } from './decorator-child/decorator-child.component';
@@ -82,27 +81,18 @@ import { RouterOutletComponent } from './router-outlet/router-outlet.component';
 import { RouterLogInComponent } from './router-log-in/router-log-in.component';
 import { RouterAboutUsComponent } from './router-about-us/router-about-us.component';
 import { RouterContactUsComponent } from './router-contact-us/router-contact-us.component';
-import { RouterHomeComponent } from './router-home/router-home.component';
 import { RouterPageNotFoundComponent } from './router-page-not-found/router-page-not-found.component';
- import { RouterProductComponent } from './router-product/router-product.component';
- import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
- import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
- import { AudiComponent } from './router-product/audi/audi.component';
- import { FortunerComponent } from './router-product/fortuner/fortuner.component';
 import { RouterParameterizeDemoComponent } from './router-parameterize-demo/router-parameterize-demo.component';
 import { RouterParaPostDetailsComponent } from './router-para-post-details/router-para-post-details.component';
 import { ProductModule } from './router-product/product.module';
 import { RouterElectronicsProductsComponent } from './router-electronics-products/router-electronics-products.component';
-import { TvComponent } from './router-electronics-products/tv/tv.component';
-import { CoolerComponent } from './router-electronics-products/cooler/cooler.component';
-import { AcComponent } from './router-electronics-products/ac/ac.component';
-import { RefrigeratorsComponent } from './router-electronics-products/refrigerators/refrigerators.component';
 import { FeatureElectricalModule } from './router-electronics-products/feature-electrical.module';
 import { RouteGuardOneComponent } from './route-guard-one/route-guard-one.component';
 import { RouteGuardThreeComponent } from './route-guard-three/route-guard-three.component';
 import { RouteGuardFiveComponent } from './route-guard-five/route-guard-five.component';
 import { RouteGuardFourComponent } from './route-guard-four/route-guard-four.component';
 import { RouterRegistrationFormComponent } from './router-registration-form/router-registration-form.component';
+import { CurdModule } from './CURD/curd.module';
 
 
 
@@ -198,6 +188,7 @@ import { RouterRegistrationFormComponent } from './router-registration-form/rout
   // CoolerComponent,            // Created Separate Feature Module
   // AcComponent,
   // RefrigeratorsComponent,
+  // DeletePostComponent
   ],
 
 
@@ -210,7 +201,7 @@ import { RouterRegistrationFormComponent } from './router-registration-form/rout
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,       // HttpClientModule 
-           
+    CurdModule    
   ],
 
 
