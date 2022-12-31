@@ -7,21 +7,11 @@ import { RouteGuardThreeComponent } from './route-guard-three/route-guard-three.
 import { ActiveSecondGuard } from './routeGuard/active-second.guard';
 import { DeactivateGuard } from './routeGuard/deactivate.guard';
 
-import { RouterAboutUsComponent } from './router-about-us/router-about-us.component';
 import { RouterContactUsComponent } from './router-contact-us/router-contact-us.component';
-import { RouterHomeComponent } from './router-home/router-home.component';
 import { RouterLogInComponent } from './router-log-in/router-log-in.component';
-import { RouterPageNotFoundComponent } from './router-page-not-found/router-page-not-found.component';
 import { RouterParaPostDetailsComponent } from './router-para-post-details/router-para-post-details.component';
 import { RouterParameterizeDemoComponent } from './router-parameterize-demo/router-parameterize-demo.component';
-import { AudiComponent } from './router-product/audi/audi.component';
-import { FortunerComponent } from './router-product/fortuner/fortuner.component';
-import { RangeRoverComponent } from './router-product/range-rover/range-rover.component';
-import { RollsRoyceComponent } from './router-product/rolls-royce/rolls-royce.component';
-import { RouterProductComponent } from './router-product/router-product.component';
 import { RouterRegistrationFormComponent } from './router-registration-form/router-registration-form.component';
-import { ServiceModule } from './routerLoading/service.module';
-import { ServiceComponent } from './routerLoading/service/service.component';
 import { CustomPreloadingService } from './servicess/custom-preloading.service';
 
  
