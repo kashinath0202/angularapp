@@ -1,0 +1,110 @@
+<div *ngFor="let songs of songsData; block">
+
+    <div class="card border-success mb-3" style="max-width: 18rem;">
+        <div class="card">
+          <img class="card-img-top" src="{{songs.artists.hits[0].artist.avatar}}" alt="Card image cap">
+          <div class="card-body">
+            <h5 class="card-title">{{songs.artists.hits[0].artist.adamid}}</h5>
+            <p class="card-text">{{songs.artists.hits[0].artist.name}}</p>
+            <p><a href="{{songs.artists.hits[0].artist.weburl}}">Play</a></p>
+            <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+        </div>
+    </div>
+ </div>
+
+
+ <div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card">
+      <img class="card-img-top" src="{{songs.tracks.hits[0].track.hub.actions.image}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{songs.tracks.hits[0].snippet}}</h5>
+        <p class="card-text">{{songs.tracks.hits[0].track.artists[0].adamid}}</p>
+        <p class="card-text">{{songs.tracks.hits[0].track.artists[0].id}}</p>
+        <p><a href="{{songs.tracks.hits[0].track.hub.actions[1].uri}}">Play</a></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+</div>
+</div>
+
+
+<div class="card border-success mb-3" style="max-width: 18rem;">
+    <div class="card">
+      <img class="card-img-top" src="{{songs.tracks.hits[0].track.hub.options[0].actions[0].uri}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{songs.tracks.hits[0].track.hub.actions[0].id}}</h5>
+        <p class="card-text">{{songs.tracks.hits[0].track.hub.actions[0].name}}</p>
+        <p class="card-text">{{songs.tracks.hits[0].track.hub.actions[0].type}}</p>
+        <p><a href="{{songs.tracks.hits[0].track.hub.actions[1].uri}}">Play</a></p>
+        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+    </div>
+</div>
+</div>
+
+    <div class="card-group col-md-3">
+        <div class="card">
+            <div>
+            <p>{{songs.tracks.hits[0].track.hub.options[0].actions[0].name}}</p>
+            <p>{{songs.tracks.hits[0].track.hub.options[0].actions[0].type}}</p>
+            <p> <a href="{{songs.tracks.hits[0].track.hub.options[0].actions[0].uri}}"></a></p>
+
+            <p>{{songs.tracks.hits[0].track.hub.options[0].actions[1].name}}</p>
+            <p>{{songs.tracks.hits[0].track.hub.options[0].actions[1].type}}</p>
+            <p><a href="{{songs.tracks.hits[0].track.hub.options[0].actions[1].uri}}">Play</a></p>
+        </div>
+    </div>
+ </div>
+    <div class="card-group">
+        <div class="card">
+
+            <p>{{songs.tracks.hits[0].track.hub.options[0].beacondata.providername}}</p>
+            <p>a{{songs.tracks.hits[0].track.hub.options[0].beacondata.type}}</p>
+            <p>{{songs.tracks.hits[0].track.hub.options[0].beacondata.caption}}</p>
+            <p>{{songs.tracks.hits[0].track.hub.options[0].beacondata.listcaption}}</p>
+
+            <p>{{songs.tracks.hits[0].track.hub.options[1].actions[0].type}}</p>
+            <p><a href="{{songs.tracks.hits[0].track.hub.options[1].actions[0].uri}}">Play</a> </p>
+        </div>
+    </div>
+
+    <div class="card-group">
+        <div class="card">
+
+            <p>{{songs.tracks.hits[1].track.hub.providers[0].actions[0].name}}</p>
+            <p>{{songs.tracks.hits[1].track.hub.providers[0].actions[0].type}}</p>
+            <p>{{songs.tracks.hits[1].track.hub.providers[0].actions[0].uri}}</p>
+
+            <p><img src="{{songs.tracks.hits[1].track.images.background}}" alt=""></p>
+            <!-- <p><img src="{{songs.tracks.hits[1].track.images.coverart}}" alt=""></p>  -->
+
+            <p><img src="{{songs.tracks.hits[1].track.images.coverarthq}}" alt=""></p>
+            <p>{{songs.tracks.hits[1].track.images.joecolor}}</p>
+            <p>{{songs.tracks.hits[1].track.images.key}}</p>
+            <!-- <p>{{songs.tracks.hits[1].track.images.layout}}</p>  -->
+            <p><a href="{{songs.tracks.hits[0].track.hub.options[0].beacondata.overflowimage}}">Play</a></p>
+        </div>
+    </div>
+
+    <div class="card-group">
+        <div class="card">
+
+            <p><a href="{{songs.tracks.hits[0].track.share.href}}">Play</a></p>
+            <p><a href="{{songs.tracks.hits[0].track.share.html}}">Play</a></p>
+            <!-- <p><img src="{{songs.tracks.hits[0].track.share.avatar}}"></p> -->
+            <p><img src="{{songs.tracks.hits[0].track.share.image}}"></p>
+            <p>{{songs.tracks.hits[0].track.share.subject}}</p>
+            <p>{{songs.tracks.hits[0].track.share.text}}</p>
+            <p>{{songs.tracks.hits[0].track.share.twitter}}</p>
+            <p><a href="{{songs.tracks.hits[0].track.share.snapchat}}">Play</a></p>
+
+        </div>
+    </div>
+
+    <div class="card-group">
+        <div class="card">
+            <p>{{songs.tracks.hits[0].track.subtitle}}</p>
+            <p>{{songs.tracks.hits[0].track.title}}</p>
+            <p>{{songs.tracks.hits[0].track.type}}</p>
+            <p><a href="{{songs.tracks.hits[0].track.url}}">Play</a></p>
+        </div>
+    </div>
+</div>
