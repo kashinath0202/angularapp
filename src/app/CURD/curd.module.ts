@@ -6,6 +6,7 @@ import { BeveragesAndDessertsService } from 'src/app/services/beverages-and-dess
 import { SimpleCurdOpComponent } from './simple-curd-op/simple-curd-op.component';
 import { FruitsComponent } from './fruits/fruits.component';
 import { CricketComponent } from './cricket/cricket.component';
+import { SongsGetComponent } from './songs-get/songs-get.component';
 
 
 
@@ -15,7 +16,8 @@ import { CricketComponent } from './cricket/cricket.component';
       GetApiBeveragesAndDessertsComponent,
       SimpleCurdOpComponent,
       FruitsComponent,
-      CricketComponent
+      CricketComponent,
+      SongsGetComponent
   ],
   imports: [
     CommonModule
@@ -26,7 +28,8 @@ import { CricketComponent } from './cricket/cricket.component';
     GetApiBeveragesAndDessertsComponent,
     SimpleCurdOpComponent,
     FruitsComponent,
-    CricketComponent
+    CricketComponent,
+    SongsGetComponent
   ]
 })
 export class CurdModule { }
