@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators, FormControl } from '@angular/forms';
 import { Observable } from 'rxjs';
+import { FirebasePost } from '../models/firebase';
+import { FirebaseService } from '../services/firebase.service';
 
 @Component({
   selector: 'app-router-registration-form',
@@ -12,12 +14,13 @@ export class RouterRegistrationFormComponent implements OnInit {
   reactiveForm:FormGroup
   FormGroup: any;
 
-  constructor() {
+  constructor(private _firebaseService : FirebaseService) {   // using post
     this.createForm();
    }
 
+
+  
   ngOnInit() {
-    
   }
  
   createForm(){ 
@@ -38,9 +41,31 @@ export class RouterRegistrationFormComponent implements OnInit {
   })
   }
 
+  firebaseClass : FirebasePost // class property  (Post CURD)
+
   onSubmit(){
-    console.log(this.reactiveForm);
-    
+    console.log(this.reactiveForm);    
+    this.firebaseClass = new FirebasePost             // instance of object (Post CURD)
+    this.firebaseClass.userName = this.reactiveForm['controls'].userName.value;
+    this.firebaseClass.email = this.reactiveForm['controls'].email.value;
+    this.firebaseClass.course = this.reactiveForm['controls'].course.value;
+    this.firebaseClass.Gender = this.reactiveForm['controls'].Gender.value;
+    this.firebaseClass.paramentAddress = this.reactiveForm['controls'].addressDetails['controls'].paramentAddress.value
+    this.firebaseClass.pinCode = this.reactiveForm['controls'].addressDetails['controls'].pinCode.value
+    //  console.log('formData',this.firebaseClass);
+     
+     this._firebaseService.postReactiveForm(this.firebaseClass).subscribe(postData=>{
+             
+             console.log('Post Data from Firebase',postData);
+     })
+  }
+
+  formData=[];
+  getData(){                                // Get Data On Firebase
+    this._firebaseService.getPostDataFirebase().subscribe(getForm=>{
+      console.log('Get Data from Firebase',getForm);
+        this.formData.push(getForm)           
+   })
   }
 
     // For Using Genders

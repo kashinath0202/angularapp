@@ -1,0 +1,17 @@
+.post{
+    background-color: rgb(160, 146, 129);
+    border-radius: 10px;
+    border: 2px solid red;
+    margin-bottom: 20px;
+    width: 500px;
+}
+.delete{
+    background-color: rgb(160, 146, 129);
+    border-radius: 10px;
+    border: 2px solid red;
+    margin-bottom: 20px;
+    width: 500px;
+}
+button{
+    margin-bottom: 10px;
+}
