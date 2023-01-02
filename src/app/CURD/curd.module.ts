@@ -7,6 +7,7 @@ import { SimpleCurdOpComponent } from './simple-curd-op/simple-curd-op.component
 import { FruitsComponent } from './fruits/fruits.component';
 import { CricketComponent } from './cricket/cricket.component';
 import { SongsGetComponent } from './songs-get/songs-get.component';
+import { PostFirebaseComponent } from './post-firebase/post-firebase.component';
 
 
 
@@ -17,7 +18,8 @@ import { SongsGetComponent } from './songs-get/songs-get.component';
       SimpleCurdOpComponent,
       FruitsComponent,
       CricketComponent,
-      SongsGetComponent
+      SongsGetComponent,
+      PostFirebaseComponent
   ],
   imports: [
     CommonModule
@@ -29,7 +31,8 @@ import { SongsGetComponent } from './songs-get/songs-get.component';
     SimpleCurdOpComponent,
     FruitsComponent,
     CricketComponent,
-    SongsGetComponent
+    SongsGetComponent,
+    PostFirebaseComponent
   ]
 })
 export class CurdModule { }
