@@ -9,14 +9,14 @@ import { SongsGetService } from 'src/app/services/songs-get.service';
 export class SongsGetComponent implements OnInit {
 
   
-   songsData=[];
+   songsData=[];  
 
   constructor(private _songsGetService : SongsGetService) { }
 
   ngOnInit() {
     this._songsGetService.getSongs().subscribe(songs=>{
             console.log(songs);
-            this.songsData.push(songs);
+            this.songsData.push(songs);    
     })
   }
 }
